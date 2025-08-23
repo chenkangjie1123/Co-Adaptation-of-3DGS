@@ -28,7 +28,7 @@ This paper introduces the concept of **co-adaptation** in 3D Gaussian Splatting 
 👉 *The code is based on [Binocular3DGS](https://github.com/hanl2010/Binocular3DGS). Thanks for their great work!* 🙌  
 
 
-## 🎨 Why Color Artifacts in Sparse-view 3DGS?
+## 🎨 Why Color Artifacts in Sparse-View 3DGS?
 <p align="center">
   <img width="90%" alt="Visualization" src="https://github.com/user-attachments/assets/a5653fb8-15bf-44bc-88eb-fd207193708d" />
 </p>

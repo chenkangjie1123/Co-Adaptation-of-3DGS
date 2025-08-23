@@ -1,36 +1,56 @@
 <p align="center">
-  <h1 align="center">Quantifying and Alleviating Co-Adaptation in <br>Sparse-View 3D Gaussian Splatting</h1>
-<p align="center">
-  
+  <h1 align="center">✨ Quantifying and Alleviating Co-Adaptation in <br/> Sparse-View 3D Gaussian Splatting ✨</h1>
+</p>
 
 <p align="center">
   <a href="https://github.com/chenkangjie1123">Kangjie Chen</a>, 
-  <a href="https://github.com/zhongyingji">Yingji Zhong</a>,
-  <a href="https://scholar.google.com/citations?hl=en&user=4cuefJ0AAAAJ">Zhihao Li</a>,
-  <a href="#">Jiaqi Lin</a>,
-  <a href="https://github.com/YouyuChen0207">Youyu Chen</a>,
+  <a href="https://github.com/zhongyingji">Yingji Zhong</a>, 
+  <a href="https://scholar.google.com/citations?hl=en&user=4cuefJ0AAAAJ">Zhihao Li</a>, 
+  <a>Jiaqi Lin</a>, 
+  <a href="https://github.com/YouyuChen0207">Youyu Chen</a>, 
   <a href="https://minghanqin.github.io/">Minghan Qin</a>, 
-  <a href="https://www.sigs.tsinghua.edu.cn/whq_en/main.htm">Haoqian Wang†</a>
-  <br>(† means corresponding author)<br>
+  <a href="https://www.sigs.tsinghua.edu.cn/whq_en/main.htm">Haoqian Wang</a> 📪  
+  <br>(📪 corresponding author)<br>
 </p>
+
+---
 
 <p align="center">
-  <a href="https://chenkangjie1123.github.io/SLGaussian.github.io/">Webpage</a> | 
-  <a href="https://arxiv.org/abs/2412.08331">Full Paper</a> | 
-  <a href="https://www.youtube.com/watch?v=iIWhK9_2kgA">Video</a>
+  🔗 <a href="https://chenkangjie1123.github.io/Co-Adaptation-3DGS/#">Project Page</a> •
+  📄 <a href="https://arxiv.org/abs/2508.12720">arXiv</a> •
+  📑 <a href="https://arxiv.org/pdf/2508.12720">Paper PDF</a>
 </p>
 
-<!--# SLGaussian: Fast Language Gaussian Splatting in Sparse Views-->
-![image](https://github.com/user-attachments/assets/1b8f5775-dacb-4241-8c5c-c4ce6a2aed23)
-With just two RGB views, our method infers 3D semantic fields in under 30 seconds without per-scene optimization. On LERF and 3D-OVS datasets (image resolution 416 × 576), query time is 0.011 seconds/query, outperforming existing methods in both speed and IoU metrics.
+---
 
+## 📝 TL;DR
+This paper introduces the concept of **co-adaptation** in 3D Gaussian Splatting (3DGS),  
+analyzes its role in rendering artifacts, and proposes two strategies:  
+- 🎲 **Dropout Regularization** – Randomly drops subsets of Gaussians to prevent over-co-adaptation.  
+- 🌫️ **Opacity Noise Injection** – Adds noise to opacity values, suppressing spurious fitting and enhancing robustness.  
 
+---
 
-```
-@article{chen2024slgaussian,
-  title={Slgaussian: Fast language gaussian splatting in sparse views},
-  author={Chen, Kangjie and Dai, BingQuan and Qin, Minghan and Zhang, Dongbin and Li, Peihao and Zou, Yingshuang and Wang, Haoqian},
-  journal={arXiv preprint arXiv:2412.08331},
-  year={2024}
+## 🎨 Visualization
+<p align="center">
+  <img width="90%" alt="Visualization" src="https://github.com/user-attachments/assets/a5653fb8-15bf-44bc-88eb-fd207193708d" />
+</p>
+
+*Visualization of 3DGS behaviors under different levels of co-adaptation.*  
+- Thin gray arrows → training views  
+- Bold arrows → novel view  
+- ✅ Green arrow → correct color prediction  
+- ❌ Red arrow → color errors  
+
+---
+
+## 📚 Citation
+If you find our work useful, please cite us:  
+
+```bibtex
+@article{chen2025quantifying,
+  title={Quantifying and Alleviating Co-Adaptation in Sparse-View 3D Gaussian Splatting},
+  author={Chen, Kangjie and Zhong, Yingji and Li, Zhihao and Lin, Jiaqi and Chen, Youyu and Qin, Minghan and Wang, Haoqian},
+  journal={arXiv preprint arXiv:2508.12720},
+  year={2025}
 }
-```

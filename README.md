@@ -19,15 +19,12 @@
   📑 <a href="https://arxiv.org/pdf/2508.12720">Paper PDF</a>
 </p>
 
----
-
 ## 📝 TL;DR
-This paper introduces the concept of **co-adaptation** in 3D Gaussian Splatting (3DGS),  
-analyzes its role in rendering artifacts, and proposes two strategies:  
+This paper introduces the concept of **co-adaptation** in 3D Gaussian Splatting (3DGS), analyzes its role in rendering artifacts, and proposes two strategies:  
 - 🎲 **Dropout Regularization** – Randomly drops subsets of Gaussians to prevent over-co-adaptation.  
 - 🌫️ **Opacity Noise Injection** – Adds noise to opacity values, suppressing spurious fitting and enhancing robustness.  
 
-## 🎨 Visualization
+## 🎨 Why Color Artifacts in Sparse-view 3DGS?
 <p align="center">
   <img width="90%" alt="Visualization" src="https://github.com/user-attachments/assets/a5653fb8-15bf-44bc-88eb-fd207193708d" />
 </p>
@@ -37,8 +34,6 @@ analyzes its role in rendering artifacts, and proposes two strategies:
 - Bold arrows → novel view  
 - ✅ Green arrow → correct color prediction  
 - ❌ Red arrow → color errors  
-
----
 
 ## 📚 Citation
 If you find our work useful, please cite us:  

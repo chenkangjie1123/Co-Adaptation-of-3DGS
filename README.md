@@ -41,7 +41,7 @@ This paper introduces the concept of **co-adaptation** in 3D Gaussian Splatting 
 
 
 ## 📚 Citation
-If you find our work useful, please cite:  
+Please use the following citation:
 
 ```bibtex
 @article{chen2025quantifying,

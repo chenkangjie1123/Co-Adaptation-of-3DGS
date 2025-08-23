@@ -13,8 +13,6 @@
   <br>(📪 corresponding author)<br>
 </p>
 
----
-
 <p align="center">
   🔗 <a href="https://chenkangjie1123.github.io/Co-Adaptation-3DGS/#">Project Page</a> •
   📄 <a href="https://arxiv.org/abs/2508.12720">arXiv</a> •
@@ -28,8 +26,6 @@ This paper introduces the concept of **co-adaptation** in 3D Gaussian Splatting 
 analyzes its role in rendering artifacts, and proposes two strategies:  
 - 🎲 **Dropout Regularization** – Randomly drops subsets of Gaussians to prevent over-co-adaptation.  
 - 🌫️ **Opacity Noise Injection** – Adds noise to opacity values, suppressing spurious fitting and enhancing robustness.  
-
----
 
 ## 🎨 Visualization
 <p align="center">

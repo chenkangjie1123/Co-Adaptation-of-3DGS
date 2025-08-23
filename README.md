@@ -3,12 +3,12 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/chenkangjie1123">Kangjie Chen</a>, 
-  <a href="https://github.com/zhongyingji">Yingji Zhong</a>, 
-  <a href="https://scholar.google.com/citations?hl=en&user=4cuefJ0AAAAJ">Zhihao Li</a>, 
-  <a>Jiaqi Lin</a>, 
-  <a href="https://github.com/YouyuChen0207">Youyu Chen</a>, 
-  <a href="https://minghanqin.github.io/">Minghan Qin</a>, 
+  <a href="https://github.com/chenkangjie1123">Kangjie Chen</a>,  
+  <a href="https://github.com/zhongyingji">Yingji Zhong</a>,  
+  <a href="https://scholar.google.com/citations?hl=en&user=4cuefJ0AAAAJ">Zhihao Li</a>,  
+  <a>Jiaqi Lin</a>,  <br>
+  <a href="https://github.com/YouyuChen0207">Youyu Chen</a>,  
+  <a href="https://minghanqin.github.io/">Minghan Qin</a>,  
   <a href="https://www.sigs.tsinghua.edu.cn/whq_en/main.htm">Haoqian Wang</a> 📪  
   <br>(📪 corresponding author)<br>
 </p>

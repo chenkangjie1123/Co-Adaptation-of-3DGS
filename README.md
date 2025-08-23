@@ -31,7 +31,7 @@ This paper introduces the concept of **co-adaptation** in 3D Gaussian Splatting 
 
 *Visualization of 3DGS behaviors under different levels of co-adaptation.*  
 - Thin gray arrows → training views  
-- ✅❌ Bold arrows → novel view  
+- ✅ ❌ Bold arrows → novel view  
 - ✅ Green arrow → correct color prediction  
 - ❌ Red arrow → color errors  
 

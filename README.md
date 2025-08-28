@@ -19,8 +19,8 @@
 </p>
 
 <p align="center">
-  <a href="https://chenkangjie1123.github.io/Co-Adaptation-3DGS/#">Webpage</a> •
-  <a href="https://arxiv.org/abs/2508.12720">arXiv</a> •
+  <a href="https://chenkangjie1123.github.io/Co-Adaptation-3DGS/#">Webpage</a> |
+  <a href="https://arxiv.org/abs/2508.12720">arXiv</a> |
   <a href="https://arxiv.org/pdf/2508.12720">Paper</a>
 </p>
 

@@ -30,7 +30,7 @@ This paper introduces the concept of **co-adaptation** in 3D Gaussian Splatting 
 - 🎲 **Dropout Regularization** – Randomly drops subsets of Gaussians to prevent over-co-adaptation.  
 - 🌫️ **Opacity Noise Injection** – Adds noise to opacity values, suppressing spurious fitting and enhancing robustness.  
 
-👉 *The code is based on [Binocular3DGS](https://github.com/hanl2010/Binocular3DGS). Thanks for their great work!* 🙌  
+*The code is based on [Binocular3DGS](https://github.com/hanl2010/Binocular3DGS). Thanks for their great work!*
 
 
 ## 🌟 Abstract

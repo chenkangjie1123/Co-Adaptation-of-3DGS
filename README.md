@@ -18,14 +18,15 @@
   <sup>4</sup> Harbin Institute of Technology
 </p>
 
-<p align="center">
-  <a href="https://chenkangjie1123.github.io/Co-Adaptation-3DGS/#">Webpage</a> |
-  <a href="https://arxiv.org/abs/2508.12720">arXiv</a> |
-  <a href="https://arxiv.org/pdf/2508.12720">Paper</a>
-</p>
+<div align="center" style="text-align: center;">
+
+[![Project Page](https://img.shields.io/badge/🌐-Project_Page-blueviolet)](https://chenkangjie1123.github.io/Co-Adaptation-3DGS/#)
+[![arXiv Paper](https://img.shields.io/badge/📜-arXiv:2508-12720)](https://arxiv.org/abs/2508.12720)
+
+</div>
 
 
-## 📝 TL;DR
+## 📌 TL;DR
 This paper introduces the concept of **co-adaptation** in 3D Gaussian Splatting (3DGS), analyzes its role in rendering artifacts, and proposes two strategies:  
 - 🎲 **Dropout Regularization** – Randomly drops subsets of Gaussians to prevent over-co-adaptation.  
 - 🌫️ **Opacity Noise Injection** – Adds noise to opacity values, suppressing spurious fitting and enhancing robustness.  
@@ -49,7 +50,8 @@ This paper introduces the concept of **co-adaptation** in 3D Gaussian Splatting 
 - ❌ Red arrow → color errors  
 
 
-## 📚 Citation
+## 📖 Citation
+If you find our work helpful, please ⭐ our repository and cite:
 ```bibtex
 @article{chen2025quantifying,
   title={Quantifying and Alleviating Co-Adaptation in Sparse-View 3D Gaussian Splatting},

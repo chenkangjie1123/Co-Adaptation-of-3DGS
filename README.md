@@ -4,21 +4,18 @@
 
 
 <p align="center">
-  <a href="https://github.com/chenkangjie1123">Kangjie Chen</a><sup>1</sup>,  
-  <a href="https://github.com/zhongyingji">Yingji Zhong</a><sup>2</sup>,  
-  <a href="https://scholar.google.com/citations?hl=en&user=4cuefJ0AAAAJ">Zhihao Li</a><sup>3</sup>,  
-  <a>Jiaqi Lin</a><sup>1</sup>,  <br>
-  <a href="https://github.com/YouyuChen0207">Youyu Chen</a><sup>4</sup>,  
-  <a href="https://minghanqin.github.io/">Minghan Qin</a><sup>1</sup>,  
+  <a href="https://github.com/chenkangjie1123">Kangjie Chen</a><sup>1</sup>  &nbsp;&nbsp
+  <a href="https://github.com/zhongyingji">Yingji Zhong</a><sup>2</sup>  &nbsp;&nbsp
+  <a href="https://scholar.google.com/citations?hl=en&user=4cuefJ0AAAAJ">Zhihao Li</a><sup>3</sup>  &nbsp;&nbsp
+  <a>Jiaqi Lin</a><sup>1</sup>  <br>
+  <a href="https://github.com/YouyuChen0207">Youyu Chen</a><sup>4</sup>  &nbsp;&nbsp
+  <a href="https://minghanqin.github.io/">Minghan Qin</a><sup>1</sup>  &nbsp;&nbsp
   <a href="https://www.sigs.tsinghua.edu.cn/whq_en/main.htm">Haoqian Wang</a><sup>1</sup> 📪  
   <br>📪 corresponding author<br>
-</p>
-
-<p align="center">
-<sup>1</sup> Tsinghua University &nbsp;&nbsp;
-<sup>2</sup> HKUST &nbsp;&nbsp;
-<sup>3</sup> Huawei Noah’s Ark Lab &nbsp;&nbsp;
-<sup>4</sup> Harbin Institute of Technology
+  <sup>1</sup> Tsinghua University &nbsp;&nbsp;
+  <sup>2</sup> HKUST &nbsp;&nbsp;
+  <sup>3</sup> Huawei Noah’s Ark Lab &nbsp;&nbsp;<br>
+  <sup>4</sup> Harbin Institute of Technology
 </p>
 
 <p align="center">

@@ -14,9 +14,9 @@
 </p>
 
 <p align="center">
-  🔗 <a href="https://chenkangjie1123.github.io/Co-Adaptation-3DGS/#">Project Page</a> •
-  📄 <a href="https://arxiv.org/abs/2508.12720">arXiv</a> •
-  📑 <a href="https://arxiv.org/pdf/2508.12720">Paper PDF</a>
+  <a href="https://chenkangjie1123.github.io/Co-Adaptation-3DGS/#">Webpage</a> •
+  <a href="https://arxiv.org/abs/2508.12720">arXiv</a> •
+  <a href="https://arxiv.org/pdf/2508.12720">Paper</a>
 </p>
 
 
@@ -28,7 +28,7 @@ This paper introduces the concept of **co-adaptation** in 3D Gaussian Splatting 
 👉 *The code is based on [Binocular3DGS](https://github.com/hanl2010/Binocular3DGS). Thanks for their great work!* 🙌  
 
 
-## 🎨 Why Color Artifacts in Sparse-View 3DGS?
+## 🌟 Why Color Artifacts in Sparse-View 3DGS?
 <p align="center">
   <img width="90%" alt="Visualization" src="https://github.com/user-attachments/assets/a5653fb8-15bf-44bc-88eb-fd207193708d" />
 </p>
@@ -41,8 +41,6 @@ This paper introduces the concept of **co-adaptation** in 3D Gaussian Splatting 
 
 
 ## 📚 Citation
-Please use the following citation:
-
 ```bibtex
 @article{chen2025quantifying,
   title={Quantifying and Alleviating Co-Adaptation in Sparse-View 3D Gaussian Splatting},

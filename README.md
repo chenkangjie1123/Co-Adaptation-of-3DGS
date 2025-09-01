@@ -22,6 +22,7 @@
 
 [![Project Page](https://img.shields.io/badge/🌐-Project_Page-blueviolet)](https://chenkangjie1123.github.io/Co-Adaptation-3DGS/#)
 [![arXiv Paper](https://img.shields.io/badge/📜-arXiv:2508-12720)](https://arxiv.org/abs/2508.12720)
+[![Videos Compare](https://img.shields.io/badge/📺-Videos%20Compare-00a1d6)](https://chenkangjie1123.github.io/Co-Adaptation-3DGS/#videos_compare)
 
 </div>
 

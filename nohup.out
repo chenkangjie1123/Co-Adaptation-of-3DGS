@@ -1,0 +1,1535 @@
+Starting job on GPU 0 with scene fern
+
+Starting job on GPU 1 with scene flower
+
+Starting job on GPU 2 with scene fortress
+CUDA_VISIBLE_DEVICES=0 python triangulate.py --data_path /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/fern --output_path /mnt1/ckj/sparseview/Binocular3DGS/keypoints_to_3d/LLFF --resolution 2 --dataset_name LLFF
+Starting job on GPU 3 with scene horns
+
+
+Starting job on GPU 4 with scene leaves
+
+CUDA_VISIBLE_DEVICES=2 python triangulate.py --data_path /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/fortress --output_path /mnt1/ckj/sparseview/Binocular3DGS/keypoints_to_3d/LLFF --resolution 2 --dataset_name LLFFStarting job on GPU 5 with scene orchids
+
+CUDA_VISIBLE_DEVICES=1 python triangulate.py --data_path /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/flower --output_path /mnt1/ckj/sparseview/Binocular3DGS/keypoints_to_3d/LLFF --resolution 2 --dataset_name LLFF
+CUDA_VISIBLE_DEVICES=3 python triangulate.py --data_path /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/horns --output_path /mnt1/ckj/sparseview/Binocular3DGS/keypoints_to_3d/LLFF --resolution 2 --dataset_name LLFF
+CUDA_VISIBLE_DEVICES=4 python triangulate.py --data_path /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/leaves --output_path /mnt1/ckj/sparseview/Binocular3DGS/keypoints_to_3d/LLFF --resolution 2 --dataset_name LLFF
+
+Starting job on GPU 6 with scene room
+CUDA_VISIBLE_DEVICES=5 python triangulate.py --data_path /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/orchids --output_path /mnt1/ckj/sparseview/Binocular3DGS/keypoints_to_3d/LLFF --resolution 2 --dataset_name LLFF
+
+Starting job on GPU 7 with scene trex
+
+CUDA_VISIBLE_DEVICES=6 python triangulate.py --data_path /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/room --output_path /mnt1/ckj/sparseview/Binocular3DGS/keypoints_to_3d/LLFF --resolution 2 --dataset_name LLFF
+CUDA_VISIBLE_DEVICES=7 python triangulate.py --data_path /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/trex --output_path /mnt1/ckj/sparseview/Binocular3DGS/keypoints_to_3d/LLFF --resolution 2 --dataset_name LLFF
+CUDA_VISIBLE_DEVICES=2 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/fortress -m /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/fortress_3views --n_views 3 --dataset_name LLFF --resolution 2 --eval
+CUDA_VISIBLE_DEVICES=2 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/fortress_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+CUDA_VISIBLE_DEVICES=2 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/fortress_3views
+Finished job on GPU 2 with scene fortress
+
+CUDA_VISIBLE_DEVICES=6 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/room -m /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/room_3views --n_views 3 --dataset_name LLFF --resolution 2 --eval
+CUDA_VISIBLE_DEVICES=4 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/leaves -m /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/leaves_3views --n_views 3 --dataset_name LLFF --resolution 2 --eval
+CUDA_VISIBLE_DEVICES=6 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/room_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+CUDA_VISIBLE_DEVICES=1 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/flower -m /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/flower_3views --n_views 3 --dataset_name LLFF --resolution 2 --eval
+CUDA_VISIBLE_DEVICES=6 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/room_3views
+CUDA_VISIBLE_DEVICES=4 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/leaves_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+CUDA_VISIBLE_DEVICES=3 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/horns -m /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/horns_3views --n_views 3 --dataset_name LLFF --resolution 2 --eval
+CUDA_VISIBLE_DEVICES=5 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/orchids -m /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/orchids_3views --n_views 3 --dataset_name LLFF --resolution 2 --eval
+CUDA_VISIBLE_DEVICES=5 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/orchids_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+CUDA_VISIBLE_DEVICES=4 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/leaves_3views
+CUDA_VISIBLE_DEVICES=0 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/fern -m /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/fern_3views --n_views 3 --dataset_name LLFF --resolution 2 --eval
+CUDA_VISIBLE_DEVICES=3 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/horns_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+CUDA_VISIBLE_DEVICES=7 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/trex -m /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/trex_3views --n_views 3 --dataset_name LLFF --resolution 2 --eval
+CUDA_VISIBLE_DEVICES=7 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/trex_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+CUDA_VISIBLE_DEVICES=0 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/fern_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+CUDA_VISIBLE_DEVICES=3 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/horns_3views
+Finished job on GPU 4 with scene leaves
+
+CUDA_VISIBLE_DEVICES=0 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/fern_3views
+Finished job on GPU 3 with scene horns
+
+CUDA_VISIBLE_DEVICES=7 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/trex_3views
+Finished job on GPU 7 with scene trex
+
+Finished job on GPU 0 with scene fern
+
+CUDA_VISIBLE_DEVICES=1 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/flower_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+Finished job on GPU 6 with scene room
+
+CUDA_VISIBLE_DEVICES=5 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/orchids_3views
+Finished job on GPU 5 with scene orchids
+
+CUDA_VISIBLE_DEVICES=1 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/flower_3views
+Finished job on GPU 1 with scene flower
+
+Traceback (most recent call last):
+  File "/mnt1/ckj/sparseview/Binocular3DGS/script/run_llff.py", line 111, in <module>
+    dispatch_jobs(jobs, executor)
+  File "/mnt1/ckj/sparseview/Binocular3DGS/script/run_llff.py", line 104, in dispatch_jobs
+    time.sleep(10)
+KeyboardInterrupt
+Starting job on GPU 0 with scene fern
+
+Starting job on GPU 1 with scene flower
+
+Starting job on GPU 2 with scene fortress
+CUDA_VISIBLE_DEVICES=0 python triangulate.py --data_path /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/fern --output_path /mnt1/ckj/sparseview/Binocular3DGS/keypoints_to_3d/LLFF --resolution 2 --dataset_name LLFF
+Starting job on GPU 3 with scene horns
+
+
+Starting job on GPU 4 with scene leaves
+CUDA_VISIBLE_DEVICES=1 python triangulate.py --data_path /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/flower --output_path /mnt1/ckj/sparseview/Binocular3DGS/keypoints_to_3d/LLFF --resolution 2 --dataset_name LLFF
+
+Starting job on GPU 5 with scene orchids
+
+CUDA_VISIBLE_DEVICES=3 python triangulate.py --data_path /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/horns --output_path /mnt1/ckj/sparseview/Binocular3DGS/keypoints_to_3d/LLFF --resolution 2 --dataset_name LLFFCUDA_VISIBLE_DEVICES=2 python triangulate.py --data_path /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/fortress --output_path /mnt1/ckj/sparseview/Binocular3DGS/keypoints_to_3d/LLFF --resolution 2 --dataset_name LLFFStarting job on GPU 6 with scene room
+
+
+
+CUDA_VISIBLE_DEVICES=6 python triangulate.py --data_path /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/room --output_path /mnt1/ckj/sparseview/Binocular3DGS/keypoints_to_3d/LLFF --resolution 2 --dataset_name LLFFStarting job on GPU 7 with scene trex
+
+
+CUDA_VISIBLE_DEVICES=4 python triangulate.py --data_path /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/leaves --output_path /mnt1/ckj/sparseview/Binocular3DGS/keypoints_to_3d/LLFF --resolution 2 --dataset_name LLFFCUDA_VISIBLE_DEVICES=5 python triangulate.py --data_path /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/orchids --output_path /mnt1/ckj/sparseview/Binocular3DGS/keypoints_to_3d/LLFF --resolution 2 --dataset_name LLFF
+
+CUDA_VISIBLE_DEVICES=7 python triangulate.py --data_path /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/trex --output_path /mnt1/ckj/sparseview/Binocular3DGS/keypoints_to_3d/LLFF --resolution 2 --dataset_name LLFF
+CUDA_VISIBLE_DEVICES=6 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/room -m /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/room_3views --n_views 3 --dataset_name LLFF --resolution 2 --eval
+CUDA_VISIBLE_DEVICES=4 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/leaves -m /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/leaves_3views --n_views 3 --dataset_name LLFF --resolution 2 --eval
+CUDA_VISIBLE_DEVICES=2 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/fortress -m /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/fortress_3views --n_views 3 --dataset_name LLFF --resolution 2 --eval
+CUDA_VISIBLE_DEVICES=3 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/horns -m /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/horns_3views --n_views 3 --dataset_name LLFF --resolution 2 --eval
+CUDA_VISIBLE_DEVICES=5 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/orchids -m /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/orchids_3views --n_views 3 --dataset_name LLFF --resolution 2 --eval
+CUDA_VISIBLE_DEVICES=0 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/fern -m /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/fern_3views --n_views 3 --dataset_name LLFF --resolution 2 --eval
+CUDA_VISIBLE_DEVICES=7 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/trex -m /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/trex_3views --n_views 3 --dataset_name LLFF --resolution 2 --eval
+CUDA_VISIBLE_DEVICES=1 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS/data/nerf_llff_data_colmap/flower -m /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/flower_3views --n_views 3 --dataset_name LLFF --resolution 2 --eval
+CUDA_VISIBLE_DEVICES=0 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/fern_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+CUDA_VISIBLE_DEVICES=0 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/fern_3views
+CUDA_VISIBLE_DEVICES=5 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/orchids_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+Finished job on GPU 0 with scene fern
+
+Job (0, 'fern') has finished., rellasing GPU 0
+CUDA_VISIBLE_DEVICES=5 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/orchids_3views
+CUDA_VISIBLE_DEVICES=1 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/flower_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+CUDA_VISIBLE_DEVICES=4 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/leaves_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+Finished job on GPU 5 with scene orchids
+
+Job (5, 'orchids') has finished., rellasing GPU 5
+CUDA_VISIBLE_DEVICES=4 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/leaves_3views
+CUDA_VISIBLE_DEVICES=1 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/flower_3views
+Finished job on GPU 4 with scene leaves
+
+Job (4, 'leaves') has finished., rellasing GPU 4
+Finished job on GPU 1 with scene flower
+
+Job (1, 'flower') has finished., rellasing GPU 1
+CUDA_VISIBLE_DEVICES=2 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/fortress_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+CUDA_VISIBLE_DEVICES=6 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/room_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+CUDA_VISIBLE_DEVICES=2 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/fortress_3views
+CUDA_VISIBLE_DEVICES=6 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/room_3views
+Finished job on GPU 2 with scene fortress
+
+Job (2, 'fortress') has finished., rellasing GPU 2
+Finished job on GPU 6 with scene room
+
+Job (6, 'room') has finished., rellasing GPU 6
+CUDA_VISIBLE_DEVICES=7 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/trex_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+CUDA_VISIBLE_DEVICES=7 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/trex_3views
+Finished job on GPU 7 with scene trex
+
+Job (7, 'trex') has finished., rellasing GPU 7
+CUDA_VISIBLE_DEVICES=3 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/horns_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+CUDA_VISIBLE_DEVICES=3 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/horns_3views
+Finished job on GPU 3 with scene horns
+
+Job (3, 'horns') has finished., rellasing GPU 3
+All blocks have been processed.
+Starting job on GPU 0 with scene fern
+
+Starting job on GPU 1 with scene flower
+
+Starting job on GPU 2 with scene fortress
+Starting job on GPU 3 with scene horns
+
+
+Starting job on GPU 4 with scene leaves
+
+CUDA_VISIBLE_DEVICES=1 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/flower_3views --n_views 3 --resolution 2 --eval --dataset_name LLFFCUDA_VISIBLE_DEVICES=0 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/fern_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+Starting job on GPU 5 with scene orchids
+
+CUDA_VISIBLE_DEVICES=3 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/horns_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+
+Starting job on GPU 6 with scene room
+CUDA_VISIBLE_DEVICES=2 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/fortress_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+
+Starting job on GPU 7 with scene trex
+CUDA_VISIBLE_DEVICES=4 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/leaves_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+
+CUDA_VISIBLE_DEVICES=5 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/orchids_3views --n_views 3 --resolution 2 --eval --dataset_name LLFFCUDA_VISIBLE_DEVICES=6 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/room_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+
+CUDA_VISIBLE_DEVICES=7 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/trex_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+CUDA_VISIBLE_DEVICES=0 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/fern_3views
+CUDA_VISIBLE_DEVICES=5 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/orchids_3views
+CUDA_VISIBLE_DEVICES=4 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/leaves_3views
+CUDA_VISIBLE_DEVICES=1 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/flower_3views
+CUDA_VISIBLE_DEVICES=2 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/fortress_3views
+CUDA_VISIBLE_DEVICES=6 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/room_3views
+CUDA_VISIBLE_DEVICES=7 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/trex_3views
+CUDA_VISIBLE_DEVICES=3 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/horns_3views
+Finished job on GPU 0 with scene fern
+
+Job (0, 'fern') has finished., rellasing GPU 0
+Finished job on GPU 5 with scene orchids
+
+Finished job on GPU 4 with scene leaves
+
+Finished job on GPU 1 with scene flower
+
+Finished job on GPU 2 with scene fortress
+
+Job (1, 'flower') has finished., rellasing GPU 1
+Job (2, 'fortress') has finished., rellasing GPU 2
+Job (4, 'leaves') has finished., rellasing GPU 4
+Job (5, 'orchids') has finished., rellasing GPU 5
+Finished job on GPU 6 with scene room
+
+Finished job on GPU 7 with scene trex
+
+Finished job on GPU 3 with scene horns
+
+Job (3, 'horns') has finished., rellasing GPU 3
+Job (6, 'room') has finished., rellasing GPU 6
+Job (7, 'trex') has finished., rellasing GPU 7
+All blocks have been processed.
+Starting job on GPU 0 with scene fern
+
+Starting job on GPU 1 with scene flower
+
+CUDA_VISIBLE_DEVICES=0 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/fern_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+CUDA_VISIBLE_DEVICES=1 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/flower_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+Starting job on GPU 2 with scene fortress
+
+Starting job on GPU 3 with scene horns
+
+Starting job on GPU 4 with scene leaves
+
+CUDA_VISIBLE_DEVICES=2 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/fortress_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+Starting job on GPU 5 with scene orchids
+
+CUDA_VISIBLE_DEVICES=3 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/horns_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+Starting job on GPU 6 with scene room
+
+Starting job on GPU 7 with scene trex
+
+CUDA_VISIBLE_DEVICES=4 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/leaves_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+CUDA_VISIBLE_DEVICES=5 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/orchids_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+CUDA_VISIBLE_DEVICES=7 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/trex_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+CUDA_VISIBLE_DEVICES=6 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/room_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+CUDA_VISIBLE_DEVICES=4 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/leaves_3views
+CUDA_VISIBLE_DEVICES=0 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/fern_3views
+CUDA_VISIBLE_DEVICES=1 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/flower_3views
+CUDA_VISIBLE_DEVICES=5 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/orchids_3views
+CUDA_VISIBLE_DEVICES=6 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/room_3views
+CUDA_VISIBLE_DEVICES=7 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/trex_3views
+CUDA_VISIBLE_DEVICES=3 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/horns_3views
+CUDA_VISIBLE_DEVICES=2 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/fortress_3views
+Finished job on GPU 0 with scene fern
+
+Finished job on GPU 4 with scene leaves
+
+Finished job on GPU 5 with scene orchids
+
+Finished job on GPU 1 with scene flower
+
+Job (0, 'fern') has finished., rellasing GPU 0
+Job (1, 'flower') has finished., rellasing GPU 1
+Job (4, 'leaves') has finished., rellasing GPU 4
+Job (5, 'orchids') has finished., rellasing GPU 5
+Finished job on GPU 2 with scene fortress
+
+Finished job on GPU 6 with scene room
+
+Finished job on GPU 7 with scene trex
+
+Finished job on GPU 3 with scene horns
+
+Job (2, 'fortress') has finished., rellasing GPU 2
+Job (3, 'horns') has finished., rellasing GPU 3
+Job (6, 'room') has finished., rellasing GPU 6
+Job (7, 'trex') has finished., rellasing GPU 7
+All blocks have been processed.
+Starting job on GPU 0 with scene fern
+
+Starting job on GPU 1 with scene flower
+
+CUDA_VISIBLE_DEVICES=0 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/fern_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+Starting job on GPU 2 with scene fortress
+
+CUDA_VISIBLE_DEVICES=1 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/flower_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+CUDA_VISIBLE_DEVICES=2 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/fortress_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+Starting job on GPU 3 with scene horns
+
+Starting job on GPU 4 with scene leaves
+
+CUDA_VISIBLE_DEVICES=3 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/horns_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+Starting job on GPU 5 with scene orchids
+
+CUDA_VISIBLE_DEVICES=4 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/leaves_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+Starting job on GPU 6 with scene room
+
+CUDA_VISIBLE_DEVICES=5 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/orchids_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+Starting job on GPU 7 with scene trex
+
+CUDA_VISIBLE_DEVICES=6 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/room_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+CUDA_VISIBLE_DEVICES=7 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/trex_3views --n_views 3 --resolution 2 --eval --dataset_name LLFF
+CUDA_VISIBLE_DEVICES=0 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/fern_3views
+CUDA_VISIBLE_DEVICES=5 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/orchids_3views
+CUDA_VISIBLE_DEVICES=4 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/leaves_3views
+CUDA_VISIBLE_DEVICES=1 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/flower_3views
+CUDA_VISIBLE_DEVICES=2 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/fortress_3views
+CUDA_VISIBLE_DEVICES=6 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/room_3views
+CUDA_VISIBLE_DEVICES=7 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/trex_3views
+CUDA_VISIBLE_DEVICES=3 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/LLFF_3views/horns_3views
+Finished job on GPU 0 with scene fern
+
+Finished job on GPU 4 with scene leaves
+
+Finished job on GPU 5 with scene orchids
+
+Finished job on GPU 1 with scene flower
+
+Job (0, 'fern') has finished., rellasing GPU 0
+Job (1, 'flower') has finished., rellasing GPU 1
+Job (4, 'leaves') has finished., rellasing GPU 4
+Job (5, 'orchids') has finished., rellasing GPU 5
+Finished job on GPU 2 with scene fortress
+
+Finished job on GPU 6 with scene room
+
+Finished job on GPU 7 with scene trex
+
+Job (2, 'fortress') has finished., rellasing GPU 2
+Job (6, 'room') has finished., rellasing GPU 6
+Job (7, 'trex') has finished., rellasing GPU 7
+Finished job on GPU 3 with scene horns
+
+Job (3, 'horns') has finished., rellasing GPU 3
+All blocks have been processed.
+Starting job on GPU 0 with scene chair
+
+Starting job on GPU 1 with scene drums
+
+CUDA_VISIBLE_DEVICES=0 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/chair -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/chair_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 2 with scene ficus
+
+Starting job on GPU 3 with scene hotdog
+
+CUDA_VISIBLE_DEVICES=1 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/drums -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/drums_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 4 with scene lego
+
+CUDA_VISIBLE_DEVICES=2 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ficus -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ficus_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 5 with scene materials
+
+CUDA_VISIBLE_DEVICES=3 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/hotdog -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/hotdog_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 6 with scene mic
+
+CUDA_VISIBLE_DEVICES=6 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/mic -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/mic_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=4 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/lego -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/lego_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=5 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/materials -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/materials_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 7 with scene ship
+
+CUDA_VISIBLE_DEVICES=7 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ship -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ship_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=2 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ficus_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=6 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/mic_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=6 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/mic_8views 
+Finished job on GPU 6 with scene mic
+
+CUDA_VISIBLE_DEVICES=5 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/materials_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=3 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/hotdog_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=3 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/hotdog_8views 
+CUDA_VISIBLE_DEVICES=1 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/drums_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=1 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/drums_8views 
+CUDA_VISIBLE_DEVICES=5 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/materials_8views 
+CUDA_VISIBLE_DEVICES=2 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ficus_8views 
+Finished job on GPU 3 with scene hotdog
+
+CUDA_VISIBLE_DEVICES=4 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/lego_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=4 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/lego_8views 
+Finished job on GPU 2 with scene ficus
+
+Finished job on GPU 5 with scene materials
+
+Finished job on GPU 1 with scene drums
+
+CUDA_VISIBLE_DEVICES=7 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ship_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=7 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ship_8views 
+CUDA_VISIBLE_DEVICES=0 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/chair_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+Finished job on GPU 4 with scene lego
+
+Finished job on GPU 7 with scene ship
+
+CUDA_VISIBLE_DEVICES=0 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/chair_8views 
+Finished job on GPU 0 with scene chair
+
+Traceback (most recent call last):
+  File "/mnt1/ckj/sparseview/Binocular3DGS/script/run_blender.py", line 145, in <module>
+    dispatch_jobs(jobs, executor)
+  File "/mnt1/ckj/sparseview/Binocular3DGS/script/run_blender.py", line 89, in dispatch_jobs
+    time.sleep(10)
+KeyboardInterrupt
+Starting job on GPU 0 with scene chair
+
+Starting job on GPU 1 with scene drums
+
+CUDA_VISIBLE_DEVICES=0 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/chair -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/chair_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 2 with scene ficus
+
+CUDA_VISIBLE_DEVICES=1 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/drums -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/drums_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 3 with scene hotdog
+
+CUDA_VISIBLE_DEVICES=2 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ficus -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ficus_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 4 with scene lego
+
+CUDA_VISIBLE_DEVICES=3 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/hotdog -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/hotdog_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 5 with scene materials
+
+Starting job on GPU 6 with scene mic
+
+CUDA_VISIBLE_DEVICES=4 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/lego -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/lego_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=5 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/materials -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/materials_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 7 with scene ship
+
+CUDA_VISIBLE_DEVICES=6 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/mic -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/mic_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=7 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ship -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ship_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=2 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ficus_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=2 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ficus_8views 
+CUDA_VISIBLE_DEVICES=7 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ship_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+Finished job on GPU 2 with scene ficus
+
+CUDA_VISIBLE_DEVICES=7 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ship_8views 
+Finished job on GPU 7 with scene ship
+
+CUDA_VISIBLE_DEVICES=0 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/chair_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=0 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/chair_8views 
+CUDA_VISIBLE_DEVICES=4 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/lego_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=3 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/hotdog_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+Finished job on GPU 0 with scene chair
+
+CUDA_VISIBLE_DEVICES=4 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/lego_8views 
+Finished job on GPU 4 with scene lego
+
+CUDA_VISIBLE_DEVICES=6 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/mic_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=3 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/hotdog_8views 
+CUDA_VISIBLE_DEVICES=5 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/materials_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=6 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/mic_8views 
+Finished job on GPU 3 with scene hotdog
+
+Finished job on GPU 6 with scene mic
+
+CUDA_VISIBLE_DEVICES=5 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/materials_8views 
+CUDA_VISIBLE_DEVICES=1 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/drums_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=1 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/drums_8views 
+Finished job on GPU 5 with scene materials
+
+Finished job on GPU 1 with scene drums
+
+Traceback (most recent call last):
+  File "/mnt1/ckj/sparseview/Binocular3DGS/script/run_blender.py", line 145, in <module>
+    dispatch_jobs(jobs, executor)
+  File "/mnt1/ckj/sparseview/Binocular3DGS/script/run_blender.py", line 89, in dispatch_jobs
+    time.sleep(10)
+KeyboardInterrupt
+Starting job on GPU 0 with scene chair
+
+Starting job on GPU 1 with scene drums
+
+Starting job on GPU 2 with scene ficus
+
+CUDA_VISIBLE_DEVICES=0 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/chair -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/chair_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=1 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/drums -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/drums_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 3 with scene hotdog
+
+CUDA_VISIBLE_DEVICES=2 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ficus -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ficus_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 4 with scene lego
+
+CUDA_VISIBLE_DEVICES=3 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/hotdog -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/hotdog_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 5 with scene materials
+
+CUDA_VISIBLE_DEVICES=4 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/lego -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/lego_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 6 with scene mic
+
+CUDA_VISIBLE_DEVICES=5 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/materials -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/materials_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 7 with scene ship
+
+CUDA_VISIBLE_DEVICES=6 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/mic -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/mic_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=7 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ship -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ship_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=1 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/drums_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=6 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/mic_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=2 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ficus_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=5 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/materials_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=0 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/chair_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=4 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/lego_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=3 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/hotdog_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=7 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ship_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=6 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/mic_8views 
+CUDA_VISIBLE_DEVICES=1 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/drums_8views 
+CUDA_VISIBLE_DEVICES=2 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ficus_8views 
+CUDA_VISIBLE_DEVICES=0 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/chair_8views 
+CUDA_VISIBLE_DEVICES=5 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/materials_8views 
+CUDA_VISIBLE_DEVICES=4 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/lego_8views 
+CUDA_VISIBLE_DEVICES=3 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/hotdog_8views 
+CUDA_VISIBLE_DEVICES=7 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ship_8views 
+Finished job on GPU 6 with scene mic
+
+Finished job on GPU 1 with scene drums
+
+Job (1, 'drums') has finished., rellasing GPU 1
+Job (6, 'mic') has finished., rellasing GPU 6
+Finished job on GPU 2 with scene ficus
+
+Finished job on GPU 0 with scene chair
+
+Finished job on GPU 5 with scene materials
+
+Job (0, 'chair') has finished., rellasing GPU 0
+Job (2, 'ficus') has finished., rellasing GPU 2
+Job (5, 'materials') has finished., rellasing GPU 5
+Finished job on GPU 4 with scene lego
+
+Finished job on GPU 3 with scene hotdog
+
+Job (3, 'hotdog') has finished., rellasing GPU 3
+Job (4, 'lego') has finished., rellasing GPU 4
+Finished job on GPU 7 with scene ship
+
+Job (7, 'ship') has finished., rellasing GPU 7
+All blocks have been processed.
+读取场景 chair_8views 的结果成功。
+读取场景 drums_8views 的结果成功。
+读取场景 materials_8views 的结果成功。
+读取场景 hotdog_8views 的结果成功。
+读取场景 mic_8views 的结果成功。
+读取场景 lego_8views 的结果成功。
+读取场景 ship_8views 的结果成功。
+读取场景 ficus_8views 的结果成功。
+所有结果已保存到 /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/summary_results.json
+Starting job on GPU 0 with scene chair
+
+Starting job on GPU 1 with scene drums
+
+CUDA_VISIBLE_DEVICES=0 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/chair -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/chair_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 2 with scene ficus
+
+CUDA_VISIBLE_DEVICES=1 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/drums -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/drums_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 3 with scene hotdog
+
+CUDA_VISIBLE_DEVICES=2 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ficus -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ficus_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 4 with scene lego
+
+CUDA_VISIBLE_DEVICES=3 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/hotdog -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/hotdog_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 5 with scene materials
+
+CUDA_VISIBLE_DEVICES=4 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/lego -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/lego_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 6 with scene mic
+
+CUDA_VISIBLE_DEVICES=5 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/materials -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/materials_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 7 with scene ship
+
+CUDA_VISIBLE_DEVICES=6 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/mic -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/mic_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=7 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ship -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ship_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=3 python render.py--model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/hotdog_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=3 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/hotdog_8views 
+CUDA_VISIBLE_DEVICES=5 python render.py--model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/materials_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=5 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/materials_8views 
+CUDA_VISIBLE_DEVICES=4 python render.py--model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/lego_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=4 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/lego_8views 
+CUDA_VISIBLE_DEVICES=7 python render.py--model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ship_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=7 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ship_8views 
+CUDA_VISIBLE_DEVICES=1 python render.py--model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/drums_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=1 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/drums_8views 
+CUDA_VISIBLE_DEVICES=2 python render.py--model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ficus_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=2 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ficus_8views 
+CUDA_VISIBLE_DEVICES=0 python render.py--model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/chair_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=0 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/chair_8views 
+CUDA_VISIBLE_DEVICES=6 python render.py--model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/mic_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=6 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/mic_8views 
+Finished job on GPU 5 with scene materials
+
+Finished job on GPU 3 with scene hotdog
+
+Finished job on GPU 7 with scene ship
+
+Finished job on GPU 4 with scene lego
+
+Job (3, 'hotdog') has finished., rellasing GPU 3
+Job (4, 'lego') has finished., rellasing GPU 4
+Job (5, 'materials') has finished., rellasing GPU 5
+Job (7, 'ship') has finished., rellasing GPU 7
+Finished job on GPU 1 with scene drums
+
+Finished job on GPU 2 with scene ficus
+
+Job (1, 'drums') has finished., rellasing GPU 1
+Job (2, 'ficus') has finished., rellasing GPU 2
+Finished job on GPU 0 with scene chair
+
+Finished job on GPU 6 with scene mic
+
+Job (0, 'chair') has finished., rellasing GPU 0
+Job (6, 'mic') has finished., rellasing GPU 6
+All blocks have been processed.
+读取场景 chair_8views 的结果成功。
+读取场景 drums_8views 的结果成功。
+读取场景 materials_8views 的结果成功。
+读取场景 hotdog_8views 的结果成功。
+读取场景 mic_8views 的结果成功。
+读取场景 lego_8views 的结果成功。
+读取场景 ship_8views 的结果成功。
+读取场景 ficus_8views 的结果成功。
+所有结果已保存到 /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/summary_results.json
+Starting job on GPU 0 with scene chair
+
+Starting job on GPU 1 with scene drums
+
+CUDA_VISIBLE_DEVICES=0 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/chair -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/chair_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 2 with scene ficus
+
+Starting job on GPU 3 with scene hotdog
+
+Starting job on GPU 4 with scene lego
+
+CUDA_VISIBLE_DEVICES=1 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/drums -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/drums_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=2 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ficus -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ficus_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=3 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/hotdog -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/hotdog_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 5 with scene materials
+
+CUDA_VISIBLE_DEVICES=4 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/lego -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/lego_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 6 with scene mic
+
+CUDA_VISIBLE_DEVICES=5 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/materials -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/materials_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 7 with scene ship
+
+CUDA_VISIBLE_DEVICES=6 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/mic -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/mic_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=7 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ship -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ship_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=2 python render.py --white_background--model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ficus_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=0 python render.py --white_background--model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/chair_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=3 python render.py --white_background--model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/hotdog_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=1 python render.py --white_background--model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/drums_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=2 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ficus_8views 
+CUDA_VISIBLE_DEVICES=0 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/chair_8views 
+CUDA_VISIBLE_DEVICES=3 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/hotdog_8views 
+CUDA_VISIBLE_DEVICES=1 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/drums_8views 
+CUDA_VISIBLE_DEVICES=6 python render.py --white_background--model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/mic_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=5 python render.py --white_background--model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/materials_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=6 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/mic_8views 
+CUDA_VISIBLE_DEVICES=4 python render.py --white_background--model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/lego_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=5 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/materials_8views 
+CUDA_VISIBLE_DEVICES=4 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/lego_8views 
+CUDA_VISIBLE_DEVICES=7 python render.py --white_background--model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ship_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=7 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ship_8views 
+Finished job on GPU 0 with scene chair
+
+Finished job on GPU 2 with scene ficus
+
+Finished job on GPU 3 with scene hotdog
+
+Job (0, 'chair') has finished., rellasing GPU 0
+Job (2, 'ficus') has finished., rellasing GPU 2
+Job (3, 'hotdog') has finished., rellasing GPU 3
+Finished job on GPU 1 with scene drums
+
+Finished job on GPU 5 with scene materials
+
+Finished job on GPU 6 with scene mic
+
+Finished job on GPU 4 with scene lego
+
+Job (1, 'drums') has finished., rellasing GPU 1
+Job (4, 'lego') has finished., rellasing GPU 4
+Job (5, 'materials') has finished., rellasing GPU 5
+Job (6, 'mic') has finished., rellasing GPU 6
+Finished job on GPU 7 with scene ship
+
+Job (7, 'ship') has finished., rellasing GPU 7
+All blocks have been processed.
+读取场景 chair_8views 的结果成功。
+读取场景 drums_8views 的结果成功。
+读取场景 materials_8views 的结果成功。
+读取场景 hotdog_8views 的结果成功。
+读取场景 mic_8views 的结果成功。
+读取场景 lego_8views 的结果成功。
+读取场景 ship_8views 的结果成功。
+读取场景 ficus_8views 的结果成功。
+所有结果已保存到 /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/summary_results.json
+Starting job on GPU 0 with scene chair
+
+Starting job on GPU 1 with scene drums
+
+CUDA_VISIBLE_DEVICES=0 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/chair -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/chair_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 2 with scene ficus
+
+CUDA_VISIBLE_DEVICES=1 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/drums -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/drums_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 3 with scene hotdog
+
+CUDA_VISIBLE_DEVICES=2 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ficus -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ficus_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 4 with scene lego
+
+CUDA_VISIBLE_DEVICES=3 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/hotdog -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/hotdog_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 5 with scene materials
+
+Starting job on GPU 6 with scene mic
+
+Starting job on GPU 7 with scene ship
+
+CUDA_VISIBLE_DEVICES=4 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/lego -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/lego_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=5 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/materials -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/materials_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=6 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/mic -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/mic_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=7 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ship -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ship_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=2 python render.py --white_background--model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ficus_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=5 python render.py --white_background--model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/materials_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=2 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ficus_8views 
+CUDA_VISIBLE_DEVICES=5 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/materials_8views 
+CUDA_VISIBLE_DEVICES=0 python render.py --white_background--model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/chair_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=4 python render.py --white_background--model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/lego_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=0 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/chair_8views 
+CUDA_VISIBLE_DEVICES=3 python render.py --white_background--model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/hotdog_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=4 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/lego_8views 
+CUDA_VISIBLE_DEVICES=3 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/hotdog_8views 
+CUDA_VISIBLE_DEVICES=7 python render.py --white_background--model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ship_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=7 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/ship_8views 
+CUDA_VISIBLE_DEVICES=1 python render.py --white_background--model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/drums_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=1 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/drums_8views 
+CUDA_VISIBLE_DEVICES=6 python render.py --white_background--model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/mic_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=6 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/mic_8views 
+Finished job on GPU 2 with scene ficus
+
+Job (2, 'ficus') has finished., rellasing GPU 2
+Finished job on GPU 5 with scene materials
+
+Finished job on GPU 0 with scene chair
+
+Finished job on GPU 4 with scene lego
+
+Finished job on GPU 3 with scene hotdog
+
+Job (0, 'chair') has finished., rellasing GPU 0
+Job (3, 'hotdog') has finished., rellasing GPU 3
+Job (4, 'lego') has finished., rellasing GPU 4
+Job (5, 'materials') has finished., rellasing GPU 5
+Finished job on GPU 7 with scene ship
+
+Finished job on GPU 1 with scene drums
+
+Job (1, 'drums') has finished., rellasing GPU 1
+Job (7, 'ship') has finished., rellasing GPU 7
+Finished job on GPU 6 with scene mic
+
+Job (6, 'mic') has finished., rellasing GPU 6
+All blocks have been processed.
+读取场景 chair_8views 的结果成功。
+读取场景 drums_8views 的结果成功。
+读取场景 materials_8views 的结果成功。
+读取场景 hotdog_8views 的结果成功。
+读取场景 mic_8views 的结果成功。
+读取场景 lego_8views 的结果成功。
+读取场景 ship_8views 的结果成功。
+读取场景 ficus_8views 的结果成功。
+所有结果已保存到 /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_whitebackground/summary_results.json
+Starting job on GPU 0 with scene chair
+
+Starting job on GPU 1 with scene drums
+
+CUDA_VISIBLE_DEVICES=0 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/chair -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/chair_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 2 with scene ficus
+
+CUDA_VISIBLE_DEVICES=1 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/drums -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/drums_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=2 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ficus -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ficus_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 3 with scene hotdog
+
+Starting job on GPU 4 with scene lego
+
+CUDA_VISIBLE_DEVICES=3 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/hotdog -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/hotdog_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=4 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/lego -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/lego_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 5 with scene materials
+
+Starting job on GPU 6 with scene mic
+
+CUDA_VISIBLE_DEVICES=5 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/materials -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/materials_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 7 with scene ship
+
+CUDA_VISIBLE_DEVICES=6 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/mic -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/mic_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=7 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ship -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ship_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=3 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/hotdog_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=1 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/drums_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=2 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ficus_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=6 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/mic_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=0 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/chair_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=5 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/materials_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=7 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ship_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=4 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/lego_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=2 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ficus_8views 
+CUDA_VISIBLE_DEVICES=1 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/drums_8views 
+CUDA_VISIBLE_DEVICES=3 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/hotdog_8views 
+CUDA_VISIBLE_DEVICES=6 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/mic_8views 
+CUDA_VISIBLE_DEVICES=0 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/chair_8views 
+CUDA_VISIBLE_DEVICES=7 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ship_8views 
+CUDA_VISIBLE_DEVICES=5 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/materials_8views 
+CUDA_VISIBLE_DEVICES=4 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/lego_8views 
+Finished job on GPU 2 with scene ficus
+
+Job (2, 'ficus') has finished., rellasing GPU 2
+Finished job on GPU 3 with scene hotdog
+
+Finished job on GPU 1 with scene drums
+
+Finished job on GPU 6 with scene mic
+
+Finished job on GPU 0 with scene chair
+
+Job (0, 'chair') has finished., rellasing GPU 0
+Job (1, 'drums') has finished., rellasing GPU 1
+Job (3, 'hotdog') has finished., rellasing GPU 3
+Job (6, 'mic') has finished., rellasing GPU 6
+Finished job on GPU 7 with scene ship
+
+Finished job on GPU 5 with scene materials
+
+Job (5, 'materials') has finished., rellasing GPU 5
+Job (7, 'ship') has finished., rellasing GPU 7
+Finished job on GPU 4 with scene lego
+
+Job (4, 'lego') has finished., rellasing GPU 4
+All blocks have been processed.
+读取场景 chair_8views 的结果成功。
+读取场景 drums_8views 的结果成功。
+读取场景 materials_8views 的结果成功。
+读取场景 hotdog_8views 的结果成功。
+读取场景 mic_8views 的结果成功。
+读取场景 lego_8views 的结果成功。
+读取场景 ship_8views 的结果成功。
+读取场景 ficus_8views 的结果成功。
+所有结果已保存到 /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/summary_results.json
+Starting job on GPU 0 with scene chair
+
+Starting job on GPU 1 with scene drums
+
+CUDA_VISIBLE_DEVICES=0 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/chair -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/chair_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 2 with scene ficus
+
+CUDA_VISIBLE_DEVICES=1 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/drums -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/drums_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 3 with scene hotdog
+
+Starting job on GPU 4 with scene lego
+
+Starting job on GPU 5 with scene materials
+
+CUDA_VISIBLE_DEVICES=3 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/hotdog -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/hotdog_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=2 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ficus -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ficus_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=4 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/lego -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/lego_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 6 with scene mic
+
+Starting job on GPU 7 with scene ship
+
+CUDA_VISIBLE_DEVICES=5 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/materials -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/materials_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=6 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/mic -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/mic_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=7 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ship -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ship_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=5 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/materials_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=5 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/materials_8views 
+Finished job on GPU 5 with scene materials
+
+CUDA_VISIBLE_DEVICES=7 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ship_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=7 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ship_8views 
+CUDA_VISIBLE_DEVICES=0 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/chair_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=0 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/chair_8views 
+Finished job on GPU 7 with scene ship
+
+Finished job on GPU 0 with scene chair
+
+CUDA_VISIBLE_DEVICES=1 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/drums_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=1 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/drums_8views 
+CUDA_VISIBLE_DEVICES=3 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/hotdog_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+Finished job on GPU 1 with scene drums
+
+CUDA_VISIBLE_DEVICES=4 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/lego_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=3 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/hotdog_8views 
+CUDA_VISIBLE_DEVICES=4 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/lego_8views 
+Finished job on GPU 3 with scene hotdog
+
+CUDA_VISIBLE_DEVICES=2 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ficus_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=2 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ficus_8views 
+CUDA_VISIBLE_DEVICES=6 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/mic_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+Finished job on GPU 4 with scene lego
+
+CUDA_VISIBLE_DEVICES=6 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/mic_8views 
+Finished job on GPU 2 with scene ficus
+
+Finished job on GPU 6 with scene mic
+
+Traceback (most recent call last):
+  File "/mnt1/ckj/sparseview/Binocular3DGS/script/run_blender.py", line 145, in <module>
+    dispatch_jobs(jobs, executor)
+  File "/mnt1/ckj/sparseview/Binocular3DGS/script/run_blender.py", line 89, in dispatch_jobs
+    time.sleep(10)
+KeyboardInterrupt
+Starting job on GPU 0 with scene chair
+
+Starting job on GPU 1 with scene drums
+
+Starting job on GPU 2 with scene ficus
+
+Starting job on GPU 3 with scene hotdog
+
+CUDA_VISIBLE_DEVICES=1 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/drums -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/drums_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=0 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/chair -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/chair_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 4 with scene lego
+
+Starting job on GPU 5 with scene materials
+
+CUDA_VISIBLE_DEVICES=2 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ficus -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ficus_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=4 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/lego -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/lego_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 6 with scene mic
+
+CUDA_VISIBLE_DEVICES=3 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/hotdog -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/hotdog_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 7 with scene ship
+
+CUDA_VISIBLE_DEVICES=5 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/materials -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/materials_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=6 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/mic -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/mic_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=7 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ship -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ship_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=1 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/drums_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=4 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/lego_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=7 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ship_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=6 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/mic_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=2 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ficus_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=0 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/chair_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=5 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/materials_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=3 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/hotdog_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=1 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/drums_8views 
+CUDA_VISIBLE_DEVICES=2 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ficus_8views 
+CUDA_VISIBLE_DEVICES=4 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/lego_8views 
+CUDA_VISIBLE_DEVICES=7 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ship_8views 
+CUDA_VISIBLE_DEVICES=6 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/mic_8views 
+CUDA_VISIBLE_DEVICES=0 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/chair_8views 
+CUDA_VISIBLE_DEVICES=3 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/hotdog_8views 
+CUDA_VISIBLE_DEVICES=5 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/materials_8views 
+Finished job on GPU 6 with scene mic
+
+Finished job on GPU 4 with scene lego
+
+Finished job on GPU 0 with scene chair
+
+Finished job on GPU 3 with scene hotdog
+
+Finished job on GPU 7 with scene ship
+
+Finished job on GPU 1 with scene drums
+
+Finished job on GPU 5 with scene materials
+
+Finished job on GPU 2 with scene ficus
+
+Traceback (most recent call last):
+  File "/mnt1/ckj/sparseview/Binocular3DGS/script/run_blender.py", line 145, in <module>
+    dispatch_jobs(jobs, executor)
+  File "/mnt1/ckj/sparseview/Binocular3DGS/script/run_blender.py", line 89, in dispatch_jobs
+    time.sleep(10)
+KeyboardInterrupt
+Starting job on GPU 0 with scene chair
+
+Starting job on GPU 1 with scene drums
+
+CUDA_VISIBLE_DEVICES=0 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/chair -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/chair_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 2 with scene ficus
+
+CUDA_VISIBLE_DEVICES=1 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/drums -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/drums_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=2 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ficus -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ficus_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 3 with scene hotdog
+
+Starting job on GPU 4 with scene lego
+
+CUDA_VISIBLE_DEVICES=3 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/hotdog -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/hotdog_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 5 with scene materials
+
+Starting job on GPU 6 with scene mic
+
+CUDA_VISIBLE_DEVICES=4 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/lego -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/lego_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=5 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/materials -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/materials_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 7 with scene ship
+
+CUDA_VISIBLE_DEVICES=6 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/mic -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/mic_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=7 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ship -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ship_8views --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=6 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/mic_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=3 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/hotdog_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=7 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ship_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=4 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/lego_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=4 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/lego_8views 
+CUDA_VISIBLE_DEVICES=0 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/chair_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=2 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ficus_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=1 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/drums_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=6 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/mic_8views 
+CUDA_VISIBLE_DEVICES=5 python render.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/materials_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=5 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/materials_8views 
+CUDA_VISIBLE_DEVICES=3 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/hotdog_8views 
+CUDA_VISIBLE_DEVICES=7 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ship_8views 
+CUDA_VISIBLE_DEVICES=1 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/drums_8views 
+Finished job on GPU 6 with scene mic
+
+Finished job on GPU 4 with scene lego
+
+CUDA_VISIBLE_DEVICES=0 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/chair_8views 
+CUDA_VISIBLE_DEVICES=2 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ficus_8views 
+Finished job on GPU 2 with scene ficus
+
+Finished job on GPU 7 with scene ship
+
+Finished job on GPU 5 with scene materials
+
+Finished job on GPU 1 with scene drums
+
+Finished job on GPU 3 with scene hotdog
+
+Finished job on GPU 0 with scene chair
+
+Traceback (most recent call last):
+  File "/mnt1/ckj/sparseview/Binocular3DGS/script/run_blender.py", line 145, in <module>
+    dispatch_jobs(jobs, executor)
+  File "/mnt1/ckj/sparseview/Binocular3DGS/script/run_blender.py", line 89, in dispatch_jobs
+    time.sleep(10)
+KeyboardInterrupt
+Starting job on GPU 0 with scene chair
+
+Starting job on GPU 1 with scene drums
+
+Starting job on GPU 2 with scene ficus
+
+Starting job on GPU 3 with scene hotdog
+
+Starting job on GPU 4 with scene lego
+
+CUDA_VISIBLE_DEVICES=0 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/chair -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/chair_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 5 with scene materials
+
+CUDA_VISIBLE_DEVICES=1 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/drums -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/drums_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 6 with scene mic
+
+Starting job on GPU 7 with scene ship
+
+CUDA_VISIBLE_DEVICES=4 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/lego -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/lego_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=3 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/hotdog -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/hotdog_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=2 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ficus -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ficus_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=5 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/materials -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/materials_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=7 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ship -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ship_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=6 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/mic -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/mic_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=0 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/chair_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=1 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/drums_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=3 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/hotdog_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=2 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ficus_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=5 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/materials_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=6 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/mic_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=4 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/lego_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=7 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ship_8views --n_views 8 --skip_train --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=2 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ficus_8views 
+CUDA_VISIBLE_DEVICES=0 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/chair_8views 
+CUDA_VISIBLE_DEVICES=1 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/drums_8views 
+CUDA_VISIBLE_DEVICES=3 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/hotdog_8views 
+CUDA_VISIBLE_DEVICES=5 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/materials_8views 
+CUDA_VISIBLE_DEVICES=6 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/mic_8views 
+CUDA_VISIBLE_DEVICES=4 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/lego_8views 
+CUDA_VISIBLE_DEVICES=7 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ship_8views 
+Finished job on GPU 2 with scene ficus
+
+Finished job on GPU 0 with scene chair
+
+Finished job on GPU 1 with scene drums
+
+Finished job on GPU 3 with scene hotdog
+
+Job (0, 'chair') has finished., rellasing GPU 0
+Job (1, 'drums') has finished., rellasing GPU 1
+Job (2, 'ficus') has finished., rellasing GPU 2
+Job (3, 'hotdog') has finished., rellasing GPU 3
+Finished job on GPU 6 with scene mic
+
+Finished job on GPU 5 with scene materials
+
+Job (5, 'materials') has finished., rellasing GPU 5
+Job (6, 'mic') has finished., rellasing GPU 6
+Finished job on GPU 4 with scene lego
+
+Job (4, 'lego') has finished., rellasing GPU 4
+Finished job on GPU 7 with scene ship
+
+Job (7, 'ship') has finished., rellasing GPU 7
+All blocks have been processed.
+读取场景 chair_8views 的结果成功。
+读取场景 drums_8views 的结果成功。
+读取场景 materials_8views 的结果成功。
+读取场景 hotdog_8views 的结果成功。
+读取场景 mic_8views 的结果成功。
+读取场景 lego_8views 的结果成功。
+读取场景 ship_8views 的结果成功。
+读取场景 ficus_8views 的结果成功。
+所有结果已保存到 /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/summary_results.json
+Starting job on GPU 0 with scene chair
+
+Starting job on GPU 1 with scene drums
+
+CUDA_VISIBLE_DEVICES=0 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/chair_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+Starting job on GPU 2 with scene ficus
+
+Starting job on GPU 3 with scene hotdog
+
+CUDA_VISIBLE_DEVICES=1 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/drums_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=2 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ficus_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+Starting job on GPU 4 with scene lego
+
+CUDA_VISIBLE_DEVICES=3 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/hotdog_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+Starting job on GPU 5 with scene materials
+
+Starting job on GPU 6 with scene mic
+
+CUDA_VISIBLE_DEVICES=4 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/lego_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=5 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/materials_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+Starting job on GPU 7 with scene ship
+
+CUDA_VISIBLE_DEVICES=6 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/mic_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=7 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ship_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=6 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/mic_8views 
+CUDA_VISIBLE_DEVICES=2 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ficus_8views 
+CUDA_VISIBLE_DEVICES=1 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/drums_8views 
+CUDA_VISIBLE_DEVICES=4 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/lego_8views 
+CUDA_VISIBLE_DEVICES=5 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/materials_8views 
+CUDA_VISIBLE_DEVICES=0 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/chair_8views 
+CUDA_VISIBLE_DEVICES=3 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/hotdog_8views 
+CUDA_VISIBLE_DEVICES=7 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/ship_8views 
+Finished job on GPU 6 with scene mic
+
+Finished job on GPU 2 with scene ficus
+
+Finished job on GPU 1 with scene drums
+
+Finished job on GPU 4 with scene lego
+
+Finished job on GPU 0 with scene chair
+
+Finished job on GPU 5 with scene materials
+
+Finished job on GPU 3 with scene hotdog
+
+Job (0, 'chair') has finished., rellasing GPU 0
+Job (1, 'drums') has finished., rellasing GPU 1
+Job (2, 'ficus') has finished., rellasing GPU 2
+Job (3, 'hotdog') has finished., rellasing GPU 3
+Job (4, 'lego') has finished., rellasing GPU 4
+Job (5, 'materials') has finished., rellasing GPU 5
+Job (6, 'mic') has finished., rellasing GPU 6
+Finished job on GPU 7 with scene ship
+
+Job (7, 'ship') has finished., rellasing GPU 7
+All blocks have been processed.
+读取场景 chair_8views 的结果成功。
+读取场景 drums_8views 的结果成功。
+读取场景 materials_8views 的结果成功。
+读取场景 hotdog_8views 的结果成功。
+读取场景 mic_8views 的结果成功。
+读取场景 lego_8views 的结果成功。
+读取场景 ship_8views 的结果成功。
+读取场景 ficus_8views 的结果成功。
+所有结果已保存到 /mnt1/ckj/sparseview/Binocular3DGS/output/Blender/summary_results.json
+Starting job on GPU 0 with scene chair
+
+Starting job on GPU 1 with scene drums
+
+Starting job on GPU 2 with scene ficus
+
+Starting job on GPU 3 with scene hotdog
+
+Starting job on GPU 4 with scene lego
+
+Job (0, 'chair') has finished., rellasing GPU 0
+Job (1, 'drums') has finished., rellasing GPU 1
+Job (2, 'ficus') has finished., rellasing GPU 2
+Job (3, 'hotdog') has finished., rellasing GPU 3
+Job (4, 'lego') has finished., rellasing GPU 4
+Starting job on GPU 5 with scene materials
+
+Starting job on GPU 6 with scene mic
+
+Starting job on GPU 7 with scene ship
+
+Job (5, 'materials') has finished., rellasing GPU 5
+Job (6, 'mic') has finished., rellasing GPU 6
+Job (7, 'ship') has finished., rellasing GPU 7
+All blocks have been processed.
+Traceback (most recent call last):
+  File "/mnt1/ckj/sparseview/Binocular3DGS/script/run_blender.py", line 146, in <module>
+    collect_results(out_base_path, os.path.join(out_base_path, "summary_results.json"))
+  File "/mnt1/ckj/sparseview/Binocular3DGS/script/run_blender.py", line 110, in collect_results
+    for scene in os.listdir(base_dir):
+FileNotFoundError: [Errno 2] No such file or directory: '/mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.8'
+Starting job on GPU 0 with scene chair
+
+Starting job on GPU 1 with scene drums
+
+Starting job on GPU 2 with scene ficus
+
+CUDA_VISIBLE_DEVICES=1 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/drums -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.8/drums_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=0 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/chair -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.8/chair_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 3 with scene hotdog
+
+CUDA_VISIBLE_DEVICES=2 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ficus -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.8/ficus_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 4 with scene lego
+
+Starting job on GPU 5 with scene materials
+
+CUDA_VISIBLE_DEVICES=3 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/hotdog -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.8/hotdog_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=4 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/lego -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.8/lego_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 6 with scene mic
+
+Starting job on GPU 7 with scene ship
+
+CUDA_VISIBLE_DEVICES=5 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/materials -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.8/materials_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=6 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/mic -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.8/mic_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=7 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ship -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.8/ship_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=2 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.8/ficus_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=0 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.8/chair_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=4 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.8/lego_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=5 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.8/materials_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=6 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.8/mic_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=3 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.8/hotdog_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=7 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.8/ship_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=1 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.8/drums_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=2 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.8/ficus_8views 
+CUDA_VISIBLE_DEVICES=0 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.8/chair_8views 
+CUDA_VISIBLE_DEVICES=4 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.8/lego_8views 
+CUDA_VISIBLE_DEVICES=6 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.8/mic_8views 
+CUDA_VISIBLE_DEVICES=5 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.8/materials_8views 
+CUDA_VISIBLE_DEVICES=3 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.8/hotdog_8views 
+CUDA_VISIBLE_DEVICES=7 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.8/ship_8views 
+CUDA_VISIBLE_DEVICES=1 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.8/drums_8views 
+Finished job on GPU 2 with scene ficus
+
+Finished job on GPU 0 with scene chair
+
+Job (0, 'chair') has finished., rellasing GPU 0
+Job (2, 'ficus') has finished., rellasing GPU 2
+Finished job on GPU 4 with scene lego
+
+Job (4, 'lego') has finished., rellasing GPU 4
+Finished job on GPU 6 with scene mic
+
+Finished job on GPU 5 with scene materials
+
+Finished job on GPU 3 with scene hotdog
+
+Job (3, 'hotdog') has finished., rellasing GPU 3
+Job (5, 'materials') has finished., rellasing GPU 5
+Job (6, 'mic') has finished., rellasing GPU 6
+Finished job on GPU 1 with scene drums
+
+Finished job on GPU 7 with scene ship
+
+Job (1, 'drums') has finished., rellasing GPU 1
+Job (7, 'ship') has finished., rellasing GPU 7
+All blocks have been processed.
+读取场景 chair_8views 的结果成功。
+读取场景 drums_8views 的结果成功。
+读取场景 materials_8views 的结果成功。
+读取场景 hotdog_8views 的结果成功。
+读取场景 mic_8views 的结果成功。
+读取场景 lego_8views 的结果成功。
+读取场景 ship_8views 的结果成功。
+读取场景 ficus_8views 的结果成功。
+所有结果已保存到 /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.8/summary_results.json
+Starting job on GPU 0 with scene chair
+
+Starting job on GPU 1 with scene drums
+
+CUDA_VISIBLE_DEVICES=0 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/chair -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.2/chair_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 2 with scene ficus
+
+CUDA_VISIBLE_DEVICES=1 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/drums -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.2/drums_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=2 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ficus -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.2/ficus_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 3 with scene hotdog
+
+Starting job on GPU 4 with scene lego
+
+Starting job on GPU 5 with scene materials
+
+CUDA_VISIBLE_DEVICES=3 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/hotdog -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.2/hotdog_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 6 with scene mic
+
+CUDA_VISIBLE_DEVICES=4 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/lego -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.2/lego_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=5 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/materials -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.2/materials_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 7 with scene ship
+
+CUDA_VISIBLE_DEVICES=6 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/mic -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.2/mic_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=7 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ship -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.2/ship_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=0 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.2/chair_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=5 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.2/materials_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=1 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.2/drums_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=2 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.2/ficus_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=4 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.2/lego_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=3 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.2/hotdog_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=7 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.2/ship_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=6 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.2/mic_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=0 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.2/chair_8views 
+CUDA_VISIBLE_DEVICES=2 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.2/ficus_8views 
+CUDA_VISIBLE_DEVICES=5 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.2/materials_8views 
+CUDA_VISIBLE_DEVICES=1 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.2/drums_8views 
+CUDA_VISIBLE_DEVICES=4 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.2/lego_8views 
+CUDA_VISIBLE_DEVICES=3 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.2/hotdog_8views 
+CUDA_VISIBLE_DEVICES=6 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.2/mic_8views 
+CUDA_VISIBLE_DEVICES=7 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.2/ship_8views 
+Finished job on GPU 0 with scene chair
+
+Finished job on GPU 5 with scene materials
+
+Finished job on GPU 1 with scene drums
+
+Finished job on GPU 2 with scene ficus
+
+Finished job on GPU 4 with scene lego
+
+Job (0, 'chair') has finished., rellasing GPU 0
+Job (1, 'drums') has finished., rellasing GPU 1
+Job (2, 'ficus') has finished., rellasing GPU 2
+Job (4, 'lego') has finished., rellasing GPU 4
+Job (5, 'materials') has finished., rellasing GPU 5
+Finished job on GPU 3 with scene hotdog
+
+Finished job on GPU 6 with scene mic
+
+Job (3, 'hotdog') has finished., rellasing GPU 3
+Job (6, 'mic') has finished., rellasing GPU 6
+Finished job on GPU 7 with scene ship
+
+Job (7, 'ship') has finished., rellasing GPU 7
+All blocks have been processed.
+读取场景 chair_8views 的结果成功。
+读取场景 drums_8views 的结果成功。
+读取场景 materials_8views 的结果成功。
+读取场景 hotdog_8views 的结果成功。
+读取场景 mic_8views 的结果成功。
+读取场景 lego_8views 的结果成功。
+读取场景 ship_8views 的结果成功。
+读取场景 ficus_8views 的结果成功。
+所有结果已保存到 /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.2/summary_results.json
+Starting job on GPU 0 with scene chair
+
+Starting job on GPU 1 with scene drums
+
+CUDA_VISIBLE_DEVICES=0 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/chair -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.5/chair_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 2 with scene ficus
+
+CUDA_VISIBLE_DEVICES=1 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/drums -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.5/drums_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=2 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ficus -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.5/ficus_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 3 with scene hotdog
+
+Starting job on GPU 4 with scene lego
+
+Starting job on GPU 5 with scene materials
+
+CUDA_VISIBLE_DEVICES=4 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/lego -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.5/lego_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=3 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/hotdog -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.5/hotdog_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 6 with scene mic
+
+CUDA_VISIBLE_DEVICES=5 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/materials -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.5/materials_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 7 with scene ship
+
+CUDA_VISIBLE_DEVICES=7 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ship -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.5/ship_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=6 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/mic -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.5/mic_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=2 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.5/ficus_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=0 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.5/chair_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=1 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.5/drums_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=5 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.5/materials_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=4 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.5/lego_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=6 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.5/mic_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=3 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.5/hotdog_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=7 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.5/ship_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=2 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.5/ficus_8views 
+CUDA_VISIBLE_DEVICES=0 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.5/chair_8views 
+CUDA_VISIBLE_DEVICES=1 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.5/drums_8views 
+CUDA_VISIBLE_DEVICES=6 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.5/mic_8views 
+CUDA_VISIBLE_DEVICES=5 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.5/materials_8views 
+CUDA_VISIBLE_DEVICES=4 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.5/lego_8views 
+CUDA_VISIBLE_DEVICES=3 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.5/hotdog_8views 
+CUDA_VISIBLE_DEVICES=7 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.5/ship_8views 
+Finished job on GPU 2 with scene ficus
+
+Finished job on GPU 1 with scene drums
+
+Finished job on GPU 6 with scene mic
+
+Finished job on GPU 0 with scene chair
+
+Job (0, 'chair') has finished., rellasing GPU 0
+Job (1, 'drums') has finished., rellasing GPU 1
+Job (2, 'ficus') has finished., rellasing GPU 2
+Job (6, 'mic') has finished., rellasing GPU 6
+Finished job on GPU 5 with scene materials
+
+Finished job on GPU 4 with scene lego
+
+Finished job on GPU 3 with scene hotdog
+
+Job (3, 'hotdog') has finished., rellasing GPU 3
+Job (4, 'lego') has finished., rellasing GPU 4
+Job (5, 'materials') has finished., rellasing GPU 5
+Finished job on GPU 7 with scene ship
+
+Job (7, 'ship') has finished., rellasing GPU 7
+All blocks have been processed.
+读取场景 chair_8views 的结果成功。
+读取场景 drums_8views 的结果成功。
+读取场景 materials_8views 的结果成功。
+读取场景 hotdog_8views 的结果成功。
+读取场景 mic_8views 的结果成功。
+读取场景 lego_8views 的结果成功。
+读取场景 ship_8views 的结果成功。
+读取场景 ficus_8views 的结果成功。
+所有结果已保存到 /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_opcitynoise0.5/summary_results.json
+Starting job on GPU 0 with scene chair
+
+Starting job on GPU 1 with scene drums
+
+CUDA_VISIBLE_DEVICES=0 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/chair -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/chair_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 2 with scene ficus
+
+CUDA_VISIBLE_DEVICES=1 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/drums -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/drums_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 3 with scene hotdog
+
+CUDA_VISIBLE_DEVICES=2 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ficus -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/ficus_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 4 with scene lego
+
+CUDA_VISIBLE_DEVICES=3 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/hotdog -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/hotdog_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 5 with scene materials
+
+Starting job on GPU 6 with scene mic
+
+CUDA_VISIBLE_DEVICES=4 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/lego -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/lego_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=5 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/materials -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/materials_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 7 with scene ship
+
+CUDA_VISIBLE_DEVICES=6 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/mic -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/mic_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=7 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ship -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/ship_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=6 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/mic_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=5 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/materials_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=6 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/mic_8views 
+Finished job on GPU 6 with scene mic
+
+CUDA_VISIBLE_DEVICES=5 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/materials_8views 
+CUDA_VISIBLE_DEVICES=1 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/drums_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=3 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/hotdog_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+Finished job on GPU 5 with scene materials
+
+CUDA_VISIBLE_DEVICES=2 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/ficus_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=0 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/chair_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=3 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/hotdog_8views 
+CUDA_VISIBLE_DEVICES=1 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/drums_8views 
+CUDA_VISIBLE_DEVICES=4 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/lego_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+Finished job on GPU 3 with scene hotdog
+
+Finished job on GPU 1 with scene drums
+
+CUDA_VISIBLE_DEVICES=2 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/ficus_8views 
+CUDA_VISIBLE_DEVICES=0 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/chair_8views 
+Job (1, 'drums') has finished., rellasing GPU 1
+Job (3, 'hotdog') has finished., rellasing GPU 3
+Job (5, 'materials') has finished., rellasing GPU 5
+Job (6, 'mic') has finished., rellasing GPU 6
+CUDA_VISIBLE_DEVICES=7 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/ship_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+Finished job on GPU 2 with scene ficus
+
+Finished job on GPU 0 with scene chair
+
+CUDA_VISIBLE_DEVICES=4 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/lego_8views 
+Finished job on GPU 4 with scene lego
+
+CUDA_VISIBLE_DEVICES=7 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/ship_8views 
+Finished job on GPU 7 with scene ship
+
+Job (0, 'chair') has finished., rellasing GPU 0
+Job (2, 'ficus') has finished., rellasing GPU 2
+Job (4, 'lego') has finished., rellasing GPU 4
+Job (7, 'ship') has finished., rellasing GPU 7
+All blocks have been processed.
+场景 chair_8views 中没有找到 results.json 文件。
+场景 drums_8views 中没有找到 results.json 文件。
+场景 materials_8views 中没有找到 results.json 文件。
+场景 hotdog_8views 中没有找到 results.json 文件。
+场景 mic_8views 中没有找到 results.json 文件。
+场景 lego_8views 中没有找到 results.json 文件。
+场景 ship_8views 中没有找到 results.json 文件。
+场景 ficus_8views 中没有找到 results.json 文件。
+所有结果已保存到 /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/summary_results.json
+Starting job on GPU 0 with scene chair
+
+Starting job on GPU 1 with scene drums
+
+CUDA_VISIBLE_DEVICES=0 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/chair -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/chair_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 2 with scene ficus
+
+CUDA_VISIBLE_DEVICES=1 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/drums -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/drums_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=2 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ficus -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/ficus_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 3 with scene hotdog
+
+Starting job on GPU 4 with scene lego
+
+CUDA_VISIBLE_DEVICES=3 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/hotdog -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/hotdog_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 5 with scene materials
+
+CUDA_VISIBLE_DEVICES=4 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/lego -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/lego_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 6 with scene mic
+
+CUDA_VISIBLE_DEVICES=5 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/materials -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/materials_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+Starting job on GPU 7 with scene ship
+
+CUDA_VISIBLE_DEVICES=6 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/mic -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/mic_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=7 python train.py -s /mnt1/ckj/sparseview/Binocular3DGS_edit/data/nerf_synthetic/ship -m /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/ship_8views --white_background --n_views 8 --dataset_name Blender --resolution 2 --eval --iterations 7000 --shift_cam_start 4000
+CUDA_VISIBLE_DEVICES=0 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/chair_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=5 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/materials_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=6 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/mic_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=3 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/hotdog_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=2 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/ficus_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=1 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/drums_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=4 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/lego_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=7 python render.py --white_background --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/ship_8views --n_views 8 --resolution 2 --eval --dataset_name Blender
+CUDA_VISIBLE_DEVICES=2 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/ficus_8views 
+CUDA_VISIBLE_DEVICES=6 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/mic_8views 
+CUDA_VISIBLE_DEVICES=0 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/chair_8views 
+CUDA_VISIBLE_DEVICES=5 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/materials_8views 
+CUDA_VISIBLE_DEVICES=1 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/drums_8views 
+CUDA_VISIBLE_DEVICES=3 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/hotdog_8views 
+CUDA_VISIBLE_DEVICES=4 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/lego_8views 
+CUDA_VISIBLE_DEVICES=7 python metrics.py --model_path /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/ship_8views 
+Finished job on GPU 2 with scene ficus
+
+Job (2, 'ficus') has finished., rellasing GPU 2
+Finished job on GPU 6 with scene mic
+
+Finished job on GPU 0 with scene chair
+
+Finished job on GPU 5 with scene materials
+
+Finished job on GPU 1 with scene drums
+
+Finished job on GPU 3 with scene hotdog
+
+Job (0, 'chair') has finished., rellasing GPU 0
+Job (1, 'drums') has finished., rellasing GPU 1
+Job (3, 'hotdog') has finished., rellasing GPU 3
+Job (5, 'materials') has finished., rellasing GPU 5
+Job (6, 'mic') has finished., rellasing GPU 6
+Finished job on GPU 4 with scene lego
+
+Finished job on GPU 7 with scene ship
+
+Job (4, 'lego') has finished., rellasing GPU 4
+Job (7, 'ship') has finished., rellasing GPU 7
+All blocks have been processed.
+读取场景 chair_8views 的结果成功。
+读取场景 drums_8views 的结果成功。
+读取场景 materials_8views 的结果成功。
+读取场景 hotdog_8views 的结果成功。
+读取场景 mic_8views 的结果成功。
+读取场景 lego_8views 的结果成功。
+读取场景 ship_8views 的结果成功。
+读取场景 ficus_8views 的结果成功。
+所有结果已保存到 /mnt1/ckj/sparseview/Binocular3DGS/output/Blender_dropout0.2/summary_results.json

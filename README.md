@@ -90,6 +90,45 @@ python script/run_blender.py
 ```
 
 
+## 🔧 Integration into Your Project
+Our strategy is designed for **sparse-view settings** and is fully compatible with the **3D Gaussian Splatting (3DGS)** framework. It can be seamlessly integrated into your own 3DGS-based project with only minimal changes.  
+
+To integrate 🎲 **Dropout Regularization**, simply add the following lines to your **`./gaussian_renderer/__init__.py`** file in the 3DGS framework:  
+
+```python
+# init random dropout mask
+if dropout_factor > 0.0 and train:
+    dropout_mask = torch.rand(pc.get_opacity.shape[0], device=pc.get_opacity.device).cuda()
+    dropout_mask = dropout_mask < (1 - dropout_factor)
+
+# randomly dropout 3DGS points during training
+if dropout_factor > 0.0 and train:
+    means3D   = means3D[dropout_mask]
+    means2D   = means2D[dropout_mask]
+    shs       = shs[dropout_mask]
+    opacity   = opacity[dropout_mask]
+    scales    = scales[dropout_mask]
+    rotations = rotations[dropout_mask]
+elif not train:
+    # scale opacity for test stage rendering
+    opacity *= 1 - dropout_factor
+```
+
+To integrate 🌫️ **Opacity Noise Injection**, simply add the following lines:  
+
+```python
+# add noise to opacity during training
+if train and sigma_noise > 0.0:
+    # sigma_noise = 0.8  # example value
+    epsilon_opacity = torch.randn_like(opacity, device=opacity.device) * sigma_noise
+    epsilon_opacity = torch.clamp(epsilon_opacity, min=-sigma_noise, max=sigma_noise)
+    opacity = torch.clamp(opacity * (1.0 + epsilon_opacity), min=0.0, max=1.0)
+```
+
+> 💡 Note: The optimal parameter setting of **Opacity Noise Injection** may vary across different baselines, configurations, scenes, and dataset types. Therefore, we generally recommend using **Dropout Regularization**, which provides more robust and stable parameter choices in practice.
+
+
+
 
 ## 📖 Citation
 If you find our work helpful, please ⭐ our repository and cite:

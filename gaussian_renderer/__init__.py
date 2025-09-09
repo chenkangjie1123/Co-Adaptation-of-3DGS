@@ -95,7 +95,7 @@ def render(viewpoint_camera, pc : GaussianModel, pipe, bg_color : torch.Tensor,
     if render_pts:
         scales = torch.full_like(scales, render_pts_scale).cuda()
         
-    # 1. randomly some dropout 3DGS points during training
+    # 1. randomly dropout 3DGS points during training
     if dropout_factor > 0.0 and train:
         means3D      = means3D[dropout_mask]
         means2D      = means2D[dropout_mask]

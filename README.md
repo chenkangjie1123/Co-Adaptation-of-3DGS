@@ -141,3 +141,16 @@ If you find our work helpful, please ⭐ our repository and cite:
   journal={arXiv preprint arXiv:2508.12720},
   year={2025}
 }
+```
+
+
+### 🔄 Concurrent Works  
+
+There are two other concurrent works that also use dropout to boost sparse-view 3DGS:  
+
+- [DropGaussian: Structural Regularization for Sparse-view Gaussian Splatting ](https://arxiv.org/abs/2504.00773) 
+- [DropoutGS: Dropping Out Gaussians for Better Sparse-view Rendering](https://arxiv.org/abs/2504.09491)  
+
+They attribute the effectiveness of dropout to empirical factors — such as reducing overfitting through fewer active splats (*DropoutGS*), or enhancing gradient flow to distant Gaussians (*DropGaussian*).  
+
+We respect these insights and are pleased that several works highlight the benefits of dropout in sparse-view 3DGS. Our work complements these findings by offering a deeper analysis of **co-adaptation**, with the goal of stimulating broader discussion on more generalizable 3D representations.  

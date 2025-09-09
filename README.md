@@ -30,7 +30,9 @@
 ## 📌 TL;DR
 This paper introduces the concept of **co-adaptation** in 3D Gaussian Splatting (3DGS), analyzes its role in rendering artifacts, and proposes two strategies:  
 - 🎲 **Dropout Regularization** – Randomly drops subsets of Gaussians to prevent over-co-adaptation.  
-- 🌫️ **Opacity Noise Injection** – Adds noise to opacity values, suppressing spurious fitting and enhancing robustness.  
+- 🌫️ **Opacity Noise Injection** – Adds noise to opacity values, suppressing spurious fitting and enhancing robustness.
+
+Besides, we further explore noise injection on other Gaussian attributes and advanced dropout variants. More details can be found in the Appendix of our paper.
 
 *The code is based on [Binocular3DGS](https://github.com/hanl2010/Binocular3DGS). Thanks for their great work!*
 

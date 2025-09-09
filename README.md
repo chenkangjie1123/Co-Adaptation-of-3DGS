@@ -50,13 +50,13 @@ This paper introduces the concept of **co-adaptation** in 3D Gaussian Splatting 
 - ✅ Green arrow → correct color prediction  
 - ❌ Red arrow → color errors  
 
-
-## Installation
-1. Clone [Co-Adaptation-of-3DGS](https://github.com/chenkangjie1123/Co-Adaptation-of-3DGS.git)
+## 🛠️ Setup
+#### Installation
+Clone [Co-Adaptation-of-3DGS](https://github.com/chenkangjie1123/Co-Adaptation-of-3DGS.git)
 ```
 git clone --recursive https://github.com/chenkangjie1123/Co-Adaptation-of-3DGS.git
 ```
-2. Setup Anaconda Environment
+Setup Anaconda Environment
 ```
 conda create -n coadaptation3dgs python=3.10
 conda activate coadaptation3dgs
@@ -65,16 +65,16 @@ pip install submodules/diff-gaussian-rasterization
 pip install submodules/simple-knn
 ```
 
-## Dataset
+#### Dataset
 - Download the processed datasets: [LLFF](https://drive.google.com/file/d/1XlnLk5SSzZ9bNdne5Wx5niA2ypo_aXAO/view?usp=drive_link) and [DTU](https://drive.google.com/file/d/13tEn6BxA3bKbTVc6xpWAbPHLALBSHOMK/view?usp=sharing)
 - Download the NeRF Synthetic dataset from [here](https://drive.google.com/file/d/1RwXCLEDxm8ssWvp-qhCBWRcechk3lsQJ/view?usp=sharing)
 
-## Checkpoints
+#### Checkpoints
 [Binocular3DGS](https://github.com/hanl2010/Binocular3DGS) use the pre-trained [PDCNet+](https://github.com/PruneTruong/DenseMatching) to generate dense initialization point clouds. The pre-trained PDCNet+ model can be downloaded [here](https://drive.google.com/file/d/151X9ovbOG35tbPjioV5CYk_5GKQ8FErw/view?usp=sharing).
 
 Put the pre-trained model in `submodules/dense_matcher/pre_trained_models`
 
-## Training and Evaluation
+## 📊 Training and Evaluation
 #### LLFF dataset
 ```
 python script/run_llff.py
@@ -84,6 +84,7 @@ python script/run_llff.py
 python script/run_dtu.py
 ```
 #### NeRF Synthetic dataset (Blender)
+When training on the Blender dataset, the evaluation metrics vary significantly between using a white background and a black background. In the paper, we adopt the white background setting while using a black background here.
 ```
 python script/run_blender.py
 ```

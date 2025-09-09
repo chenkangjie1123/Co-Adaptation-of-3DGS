@@ -12,7 +12,7 @@ n_views = 8
 resolution = 2
 
 
-# Notice: When training our method on the Blender dataset, we observed that 
+# Note: When training our method on the Blender dataset, we observed that 
 # the evaluation metrics vary significantly between using a white background 
 # and a black background. In our paper, we adopt the white background setting.
 dropout_factor = 0.3 # 0.2 or 0.3

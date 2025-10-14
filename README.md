@@ -27,6 +27,23 @@
 </div>
 
 
+## 🧭 Quick Navigation
+[Why Color Artifacts in Sparse-View 3DGS?](https://github.com/chenkangjie1123/Co-Adaptation-of-3DGS?tab=readme-ov-file#-why-color-artifacts-in-sparse-view-3dgs) 
+
+(or Why Dropout Works in Sparse-View 3DGS?)
+
+(or Why Noise Injection Works in Sparse-View 3DGS?)
+
+
+[Quantitative Comparison](https://github.com/chenkangjie1123/Co-Adaptation-of-3DGS?tab=readme-ov-file#-quantitative-comparison-on-llff-and-dtu-datasets)
+
+[Setup for Co-Adaptation-of-3DGS](https://github.com/chenkangjie1123/Co-Adaptation-of-3DGS?tab=readme-ov-file#-why-color-artifacts-in-sparse-view-3dgs)
+
+[🔧 Integration into Your Project](https://github.com/chenkangjie1123/Co-Adaptation-of-3DGS?tab=readme-ov-file#-why-color-artifacts-in-sparse-view-3dgs)
+
+[📖 Citation](https://github.com/chenkangjie1123/Co-Adaptation-of-3DGS?tab=readme-ov-file#-citation)
+
+
 ## 📌 TL;DR
 This paper introduces the concept of **co-adaptation** in 3D Gaussian Splatting (3DGS), analyzes its role in rendering artifacts, and proposes two strategies:  
 - 🎲 **Dropout Regularization** – Randomly drops subsets of Gaussians to prevent over-co-adaptation.  
@@ -37,11 +54,19 @@ Besides, we further explore noise injection on other Gaussian attributes and adv
 *The code is based on [Binocular3DGS](https://github.com/hanl2010/Binocular3DGS). Thanks for their great work!*
 
 
+## 📊 Quantitative Comparison on LLFF and DTU Datasets
+
+We evaluated existing 3DGS-based sparse-view reconstruction methods with and without our proposed **co-adaptation suppression strategies** — *dropout regularization* and *opacity noise injection*. We report **PSNR**, **SSIM**, **LPIPS**, and **Co-Adaptation (CA)** scores on both **training** and **novel views** to assess reconstruction quality and co-adaptation reduction. Experiments are conducted on **LLFF** and **DTU** datasets, using **3 training views** following prior works ([Binocular3DGS](https://github.com/hanl2010/Binocular3DGS), [Cor-GS](https://github.com/jiaw-z/CoR-GS), [FSGS](https://github.com/VITA-Group/FSGS), [RegNeRF](https://github.com/google-research/google-research/tree/master/regnerf), [FreeNeRF](https://github.com/Jiawei-Yang/FreeNeRF)). Input images are downsampled by **8×** for LLFF and **4×** for DTU relative to their original resolutions.
+<img width="1498" height="553" alt="image" src="https://github.com/user-attachments/assets/89cca527-30a6-483e-a6ec-dbfb773f0465" />
+
+
+
 ## 🌟 Abstract
 3D Gaussian Splatting (3DGS) has demonstrated impressive performance in novel view synthesis under dense-view settings. However, in sparse-view scenarios, despite the realistic renderings in training views, 3DGS occasionally manifests appearance artifacts in novel views. This paper investigates the appearance artifacts in sparse-view 3DGS and uncovers a core limitation of current approaches: the optimized Gaussians are overly-entangled with one another to aggressively fit the training views, which leads to a neglect of the real appearance distribution of the underlying scene and results in appearance artifacts in novel views. The analysis is based on a proposed metric, termed Co-Adaptation Score (CA), which quantifies the entanglement among Gaussians, i.e., co-adaptation, by computing the pixel-wise variance across multiple renderings of the same viewpoint, with different random subsets of Gaussians. The analysis reveals that the degree of co-adaptation is naturally alleviated as the number of training views increases. Based on the analysis, we propose two lightweight strategies to explicitly mitigate the co-adaptation in sparse-view 3DGS: (1) random gaussian dropout; (2) multiplicative noise injection to the opacity. Both strategies are designed to be plug-and-play, and their effectiveness is validated across various methods and benchmarks. We hope that our insights into the co-adaptation effect will inspire the community to achieve a more comprehensive understanding of sparse-view 3DGS.
 
 
-## 🌟 Why Color Artifacts in Sparse-View 3DGS?
+## ❓ Why Color Artifacts in Sparse-View 3DGS?
+(or Why Dropout Works in Sparse-View 3DGS?) (or Why Noise Injection Works in Sparse-View 3DGS?)
 <p align="center">
   <img width="90%" alt="Visualization" src="https://github.com/user-attachments/assets/a5653fb8-15bf-44bc-88eb-fd207193708d" />
 </p>
@@ -76,7 +101,7 @@ pip install submodules/simple-knn
 
 Put the pre-trained model in `submodules/dense_matcher/pre_trained_models`
 
-## 📊 Training and Evaluation
+## ⚡️ Training and Evaluation
 #### LLFF dataset
 ```
 python script/run_llff.py

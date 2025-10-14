@@ -39,7 +39,7 @@
 
 [Setup for Co-Adaptation-of-3DGS](https://github.com/chenkangjie1123/Co-Adaptation-of-3DGS?tab=readme-ov-file#%EF%B8%8F-setup)
 
-[🔧 Integration into Your Project !!!!](https://github.com/chenkangjie1123/Co-Adaptation-of-3DGS?tab=readme-ov-file#-why-color-artifacts-in-sparse-view-3dgs)
+[🔧 Integration into Your Project !!!!](https://github.com/chenkangjie1123/Co-Adaptation-of-3DGS?tab=readme-ov-file#-integration-into-your-project)
 
 [📖 Citation](https://github.com/chenkangjie1123/Co-Adaptation-of-3DGS?tab=readme-ov-file#-citation)
 

@@ -28,6 +28,11 @@
 
 
 ## 🧭 Quick Navigation
+
+[🔧 Integration into Your Project !!!!](https://github.com/chenkangjie1123/Co-Adaptation-of-3DGS?tab=readme-ov-file#-integration-into-your-project)
+
+[Setup for Co-Adaptation-of-3DGS](https://github.com/chenkangjie1123/Co-Adaptation-of-3DGS?tab=readme-ov-file#%EF%B8%8F-setup)
+
 [Why Color Artifacts in Sparse-View 3DGS?](https://github.com/chenkangjie1123/Co-Adaptation-of-3DGS?tab=readme-ov-file#-why-color-artifacts-in-sparse-view-3dgs) 
 
 (or Why Dropout Works in Sparse-View 3DGS?)
@@ -36,10 +41,6 @@
 
 
 [Quantitative Comparison](https://github.com/chenkangjie1123/Co-Adaptation-of-3DGS?tab=readme-ov-file#-quantitative-comparison-on-llff-and-dtu-datasets)
-
-[Setup for Co-Adaptation-of-3DGS](https://github.com/chenkangjie1123/Co-Adaptation-of-3DGS?tab=readme-ov-file#%EF%B8%8F-setup)
-
-[🔧 Integration into Your Project !!!!](https://github.com/chenkangjie1123/Co-Adaptation-of-3DGS?tab=readme-ov-file#-integration-into-your-project)
 
 [📖 Citation](https://github.com/chenkangjie1123/Co-Adaptation-of-3DGS?tab=readme-ov-file#-citation)
 

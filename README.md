@@ -37,9 +37,9 @@
 
 [Quantitative Comparison](https://github.com/chenkangjie1123/Co-Adaptation-of-3DGS?tab=readme-ov-file#-quantitative-comparison-on-llff-and-dtu-datasets)
 
-[Setup for Co-Adaptation-of-3DGS](https://github.com/chenkangjie1123/Co-Adaptation-of-3DGS?tab=readme-ov-file#-why-color-artifacts-in-sparse-view-3dgs)
+[Setup for Co-Adaptation-of-3DGS](https://github.com/chenkangjie1123/Co-Adaptation-of-3DGS?tab=readme-ov-file#%EF%B8%8F-setup)
 
-[🔧 Integration into Your Project](https://github.com/chenkangjie1123/Co-Adaptation-of-3DGS?tab=readme-ov-file#-why-color-artifacts-in-sparse-view-3dgs)
+[🔧 Integration into Your Project !!!!](https://github.com/chenkangjie1123/Co-Adaptation-of-3DGS?tab=readme-ov-file#-why-color-artifacts-in-sparse-view-3dgs)
 
 [📖 Citation](https://github.com/chenkangjie1123/Co-Adaptation-of-3DGS?tab=readme-ov-file#-citation)
 

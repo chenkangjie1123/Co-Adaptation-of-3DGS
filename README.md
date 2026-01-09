@@ -1,4 +1,4 @@
-# Quantifying and Alleviating Co-Adaptation in <br/> Sparse-View 3D Gaussian Splatting
+# Quantifying and Alleviating Co-Adaptation in Sparse-View 3D Gaussian Splatting
 
 [![Project Website](https://img.shields.io/badge/Project_Website-4CAF50?logo=googlechrome&logoColor=white)](https://chenkangjie1123.github.io/Co-Adaptation-3DGS/)
 [![Paper](https://img.shields.io/badge/arXiv-Paper-b31b1b?logo=arxiv&logoColor=b31b1b)](https://arxiv.org/abs/2508.12720)

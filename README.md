@@ -1,30 +1,12 @@
-<p align="center">
-  <h1 align="center">🌈 Quantifying and Alleviating Co-Adaptation in <br/> Sparse-View 3D Gaussian Splatting </h1>
-</p>
+# Quantifying and Alleviating Co-Adaptation in <br/> Sparse-View 3D Gaussian Splatting
+
+[![Project Website](https://img.shields.io/badge/Project_Website-4CAF50?logo=googlechrome&logoColor=white)](https://chenkangjie1123.github.io/Co-Adaptation-3DGS/)
+[![Paper](https://img.shields.io/badge/arXiv-Paper-b31b1b?logo=arxiv&logoColor=b31b1b)](https://arxiv.org/abs/2508.12720)
+[![Videos Compare](https://img.shields.io/badge/Videos_Compare-red?style=flat&logo=youtube&logoColor=white)](https://chenkangjie1123.github.io/Co-Adaptation-3DGS/#videos_compare)
 
 
-<p align="center">
-  <a href="https://github.com/chenkangjie1123">Kangjie Chen</a><sup>1</sup>  &nbsp;&nbsp
-  <a href="https://github.com/zhongyingji">Yingji Zhong</a><sup>2</sup>  &nbsp;&nbsp
-  <a href="https://scholar.google.com/citations?hl=en&user=4cuefJ0AAAAJ">Zhihao Li</a><sup>3</sup>  &nbsp;&nbsp
-  <a>Jiaqi Lin</a><sup>1</sup>  <br>
-  <a href="https://github.com/YouyuChen0207">Youyu Chen</a><sup>4</sup>  &nbsp;&nbsp
-  <a href="https://minghanqin.github.io/">Minghan Qin</a><sup>1</sup>  &nbsp;&nbsp
-  <a href="https://www.sigs.tsinghua.edu.cn/whq_en/main.htm">Haoqian Wang</a><sup>1</sup> 📪  
-  <br>📪 corresponding author<br>
-  <sup>1</sup> Tsinghua University &nbsp;&nbsp;
-  <sup>2</sup> HKUST &nbsp;&nbsp;
-  <sup>3</sup> Huawei Noah’s Ark Lab &nbsp;&nbsp;<br>
-  <sup>4</sup> Harbin Institute of Technology
-</p>
-
-<div align="center" style="text-align: center;">
-
-[![Project Page](https://img.shields.io/badge/🌐-Project_Page-blueviolet)](https://chenkangjie1123.github.io/Co-Adaptation-3DGS/#)
-[![arXiv Paper](https://img.shields.io/badge/📜-arXiv:2508-12720)](https://arxiv.org/abs/2508.12720)
-[![Videos Compare](https://img.shields.io/badge/📺-Videos%20Compare-00a1d6)](https://chenkangjie1123.github.io/Co-Adaptation-3DGS/#videos_compare)
-
-</div>
+[Kangjie Chen<sup>1</sup>](https://github.com/chenkangjie1123), [Yingji Zhong<sup>2</sup>](https://github.com/zhongyingji), [Zhihao Li<sup>3</sup>](https://scholar.google.com/citations?hl=en&user=4cuefJ0AAAAJ), [Jiaqi Lin<sup>1</sup>](), [Youyu Chen<sup>4</sup>](https://github.com/YouyuChen0207), [Minghan Qin<sup>1</sup>](https://minghanqin.github.io/), [Haoqian Wang<sup>1</sup>](https://www.sigs.tsinghua.edu.cn/whq_en/main.htm) <br />
+<sup>1</sup> Tsinghua University, <sup>2</sup> HKUST, <sup>3</sup> Huawei Noah’s Ark Lab, <sup>4</sup> Harbin Institute of Technology <br />
 
 
 ## 🧭 Quick Navigation
